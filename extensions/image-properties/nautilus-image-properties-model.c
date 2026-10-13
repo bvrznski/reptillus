@@ -109,7 +109,7 @@ static void
 append_gexiv_basic_info (NautilusImagesPropertiesModel *self)
 {
     const char *mime_type = gexiv2_metadata_get_mime_type (self->md);
-    GExiv2Orientation orientation = gexiv2_metadata_get_orientation (self->md, NULL);
+    GExiv2Orientation orientation = gexiv2_metadata_get_orientation (self->md);
     int width = gexiv2_metadata_get_pixel_width (self->md);
     int height = gexiv2_metadata_get_pixel_height (self->md);
 
@@ -178,15 +178,14 @@ append_gexiv2_tag (NautilusImagesPropertiesModel  *self,
 
     for (const char **i = tag_names; *i != NULL; i++)
     {
-        if (gexiv2_metadata_has_tag (self->md, *i, NULL))
+        if (gexiv2_metadata_has_tag (self->md, *i))
         {
             g_autofree char *tag_value = gexiv2_metadata_get_tag_interpreted_string (self->md,
-                                                                                     *i,
-                                                                                     NULL);
+                                                                                     *i);
 
             if (tag_description == NULL)
             {
-                tag_description = gexiv2_metadata_get_tag_description (*i, NULL);
+                tag_description = gexiv2_metadata_get_tag_description (*i);
             }
 
             /* don't add empty tags - try next one */
@@ -229,7 +228,7 @@ append_gexiv2_info (NautilusImagesPropertiesModel *self)
     append_gexiv2_tag (self, rights, _("Copyright"));
     append_gexiv2_tag (self, rating, _("Rating"));
 
-    gexiv2_metadata_get_gps_info (self->md, &longitude, &latitude, &altitude, NULL);
+    gexiv2_metadata_get_gps_info (self->md, &longitude, &latitude, &altitude);
 
     if (isnan (longitude) == 0 && isinf (longitude) == 0 &&
         isnan (latitude) == 0 && isinf (latitude) == 0)

@@ -290,6 +290,17 @@ nautilus_window_slot_get_view_id_for_location (NautilusWindowSlot *self,
         }
     }
 
+    /* Rebuntu: dedicated Computer view. */
+    if (g_file_has_uri_scheme (effective_location, "computer"))
+    {
+        g_autoptr (GFile) computer_root = g_file_new_for_uri ("computer:///");
+
+        if (g_file_equal (effective_location, computer_root))
+        {
+            return NAUTILUS_VIEW_COMPUTER_ID;
+        }
+    }
+
     if (nautilus_is_root_for_scheme (effective_location, SCHEME_NETWORK_VIEW))
     {
         return NAUTILUS_VIEW_NETWORK_ID;
@@ -341,7 +352,8 @@ nautilus_window_slot_sync_actions (NautilusWindowSlot *self)
 
     /* Files view mode */
     guint view_id = nautilus_files_view_get_view_id (self->content_view);
-    is_network_view = view_id == NAUTILUS_VIEW_NETWORK_ID;
+    is_network_view = view_id == NAUTILUS_VIEW_NETWORK_ID ||
+                      view_id == NAUTILUS_VIEW_COMPUTER_ID;
     action = g_action_map_lookup_action (G_ACTION_MAP (self->slot_action_group), "files-view-mode");
     g_simple_action_set_enabled (G_SIMPLE_ACTION (action), !is_network_view);
     if (g_action_get_enabled (action))

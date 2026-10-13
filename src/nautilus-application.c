@@ -503,6 +503,30 @@ action_clone_window (GSimpleAction *action,
                                              NAUTILUS_OPEN_FLAG_NEW_WINDOW, NULL, NULL);
 }
 
+/* Rebuntu: open GNOME Disks without invoking a shell. */
+static void
+action_rebuntu_open_disks (GSimpleAction *action,
+                           GVariant      *parameter,
+                           gpointer       user_data)
+{
+    GtkApplication *application = user_data;
+    GtkWindow *parent = gtk_application_get_active_window (application);
+    g_autoptr (GError) error = NULL;
+    const char *argv[] = { "gnome-disks", NULL };
+
+    if (g_find_program_in_path ("gnome-disks") != NULL &&
+        g_spawn_async (NULL, (char **) argv, NULL, G_SPAWN_SEARCH_PATH,
+                       NULL, NULL, NULL, &error))
+        return;
+
+    GtkAlertDialog *dialog = gtk_alert_dialog_new ("Unable to open GNOME Disks");
+    gtk_alert_dialog_set_detail (dialog,
+                                 error != NULL ? error->message :
+                                 "Install the gnome-disk-utility package.");
+    gtk_alert_dialog_show (dialog, parent);
+    g_object_unref (dialog);
+}
+
 static void
 action_preferences (GSimpleAction *action,
                     GVariant      *parameter,
@@ -598,6 +622,7 @@ static const GActionEntry app_entries[] =
     { .name = "new-window", .activate = action_new_window },
     { .name = "clone-window", .activate = action_clone_window },
     { .name = "preferences", .activate = action_preferences },
+    { .name = "rebuntu-open-disks", .activate = action_rebuntu_open_disks },
     { .name = "search-settings", .activate = action_search_settings },
     { .name = "about", .activate = action_about },
     { .name = "help", .activate = action_help },

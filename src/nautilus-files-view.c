@@ -60,6 +60,7 @@
 #include "nautilus-metadata.h"
 #include "nautilus-mime-actions.h"
 #include "nautilus-network-view.h"
+#include "rebuntu-computer-view.h"
 #include "nautilus-module.h"
 #include "nautilus-new-folder-dialog.h"
 #include "nautilus-query.h"
@@ -9626,6 +9627,12 @@ create_inner_view (NautilusFilesView *self,
         }
         break;
 
+        case NAUTILUS_VIEW_COMPUTER_ID:
+        {
+            self->list_base = NAUTILUS_LIST_BASE (rebuntu_computer_view_new ());
+        }
+        break;
+
         case NAUTILUS_VIEW_NETWORK_ID:
         {
             self->list_base = NAUTILUS_LIST_BASE (nautilus_network_view_new ());
@@ -9666,6 +9673,7 @@ nautilus_files_view_get_toggle_icon_name (NautilusFilesView *self)
         }
         break;
 
+        case NAUTILUS_VIEW_COMPUTER_ID:
         case NAUTILUS_VIEW_NETWORK_ID:
         case NAUTILUS_VIEW_GRID_ID:
         {
@@ -9699,6 +9707,7 @@ nautilus_files_view_get_toggle_tooltip (NautilusFilesView *self)
         }
         break;
 
+        case NAUTILUS_VIEW_COMPUTER_ID:
         case NAUTILUS_VIEW_NETWORK_ID:
         case NAUTILUS_VIEW_GRID_ID:
         {
