@@ -187,7 +187,7 @@ nautilus_view_controls_class_init (NautilusViewControlsClass *klass)
     g_object_class_install_properties (object_class, N_PROPS, properties);
 
     gtk_widget_class_set_template_from_resource (widget_class,
-                                                 "/org/rebuntu/reptillus/ui/nautilus-view-controls.ui");
+                                                 "/org/gnome/nautilus/ui/nautilus-view-controls.ui");
     gtk_widget_class_bind_template_child (widget_class, NautilusViewControls, view_menu);
     gtk_widget_class_bind_template_child (widget_class, NautilusViewControls, view_split_button);
 }

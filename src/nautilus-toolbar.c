@@ -495,7 +495,7 @@ nautilus_toolbar_class_init (NautilusToolbarClass *klass)
     g_object_class_install_properties (oclass, NUM_PROPERTIES, properties);
 
     gtk_widget_class_set_template_from_resource (widget_class,
-                                                 "/org/rebuntu/reptillus/ui/nautilus-toolbar.ui");
+                                                 "/org/gnome/nautilus/ui/nautilus-toolbar.ui");
 
     gtk_widget_class_bind_template_child (widget_class, NautilusToolbar, history_controls_stack);
     gtk_widget_class_bind_template_child (widget_class, NautilusToolbar, history_controls);

@@ -221,7 +221,7 @@ nautilus_preferences_dialog_show (GtkWidget *parent)
         g_clear_weak_pointer (&preferences_dialog);
     }
 
-    builder = gtk_builder_new_from_resource ("/org/rebuntu/reptillus/ui/nautilus-preferences-dialog.ui");
+    builder = gtk_builder_new_from_resource ("/org/gnome/nautilus/ui/nautilus-preferences-dialog.ui");
     nautilus_preferences_dialog_setup (builder);
 
     preferences_dialog = ADW_PREFERENCES_DIALOG (gtk_builder_get_object (builder, "preferences_dialog"));

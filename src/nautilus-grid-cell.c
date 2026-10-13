@@ -444,7 +444,7 @@ nautilus_grid_cell_class_init (NautilusGridCellClass *klass)
 
     g_type_ensure (NAUTILUS_TYPE_IMAGE);
 
-    gtk_widget_class_set_template_from_resource (widget_class, "/org/rebuntu/reptillus/ui/nautilus-grid-cell.ui");
+    gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/nautilus/ui/nautilus-grid-cell.ui");
 
     gtk_widget_class_bind_template_child (widget_class, NautilusGridCell, icon);
     gtk_widget_class_bind_template_child (widget_class, NautilusGridCell, emblems_box);

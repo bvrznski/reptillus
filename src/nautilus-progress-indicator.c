@@ -549,7 +549,7 @@ nautilus_progress_indicator_class_init (NautilusProgressIndicatorClass *klass)
     object_class->set_property = nautilus_progress_indicator_set_property;
 
     gtk_widget_class_set_template_from_resource (widget_class,
-                                                 "/org/rebuntu/reptillus/ui/nautilus-progress-indicator.ui");
+                                                 "/org/gnome/nautilus/ui/nautilus-progress-indicator.ui");
     gtk_widget_class_bind_template_child (widget_class, NautilusProgressIndicator, operations_button);
     gtk_widget_class_bind_template_child (widget_class, NautilusProgressIndicator, operations_popover);
     gtk_widget_class_bind_template_child (widget_class, NautilusProgressIndicator, operations_list);

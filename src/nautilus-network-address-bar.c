@@ -379,7 +379,7 @@ nautilus_network_address_bar_class_init (NautilusNetworkAddressBarClass *klass)
     widget_class->map = nautilus_network_address_bar_map;
 
     /* Bind class to template */
-    gtk_widget_class_set_template_from_resource (widget_class, "/org/rebuntu/reptillus/ui/nautilus-network-address-bar.ui");
+    gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/nautilus/ui/nautilus-network-address-bar.ui");
 
     gtk_widget_class_bind_template_child (widget_class, NautilusNetworkAddressBar, address_entry);
     gtk_widget_class_bind_template_child (widget_class, NautilusNetworkAddressBar, connect_button);

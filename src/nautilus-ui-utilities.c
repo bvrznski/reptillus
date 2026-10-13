@@ -269,7 +269,7 @@ ensure_filmholes (void)
 {
     if (filmholes_left == NULL)
     {
-        filmholes_left = gdk_pixbuf_new_from_resource ("/org/rebuntu/reptillus/image/filmholes.png", NULL);
+        filmholes_left = gdk_pixbuf_new_from_resource ("/org/gnome/nautilus/image/filmholes.png", NULL);
     }
     if (filmholes_right == NULL &&
         filmholes_left != NULL)

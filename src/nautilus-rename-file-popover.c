@@ -291,7 +291,7 @@ nautilus_rename_file_popover_class_init (NautilusRenameFilePopoverClass *klass)
     object_class->dispose = nautilus_rename_file_popover_dispose;
 
     gtk_widget_class_set_template_from_resource (widget_class,
-                                                 "/org/rebuntu/reptillus/ui/nautilus-rename-file-popover.ui");
+                                                 "/org/gnome/nautilus/ui/nautilus-rename-file-popover.ui");
 
     gtk_widget_class_bind_template_child (widget_class, NautilusRenameFilePopover, name_entry);
     gtk_widget_class_bind_template_child (widget_class, NautilusRenameFilePopover, title_label);

@@ -739,7 +739,7 @@ nautilus_app_chooser_widget_class_init (NautilusAppChooserWidgetClass *klass)
     /* Bind class to template
      */
     gtk_widget_class_set_template_from_resource (widget_class,
-                                                 "/org/rebuntu/reptillus/ui/nautilus-app-chooser-widget.ui");
+                                                 "/org/gnome/nautilus/ui/nautilus-app-chooser-widget.ui");
     gtk_widget_class_bind_template_child (widget_class, NautilusAppChooserWidget, program_list);
     gtk_widget_class_bind_template_child (widget_class, NautilusAppChooserWidget, no_apps_label);
     gtk_widget_class_bind_template_child (widget_class, NautilusAppChooserWidget, no_apps);

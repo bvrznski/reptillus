@@ -647,7 +647,7 @@ run_passphrase_dialog (gpointer user_data)
     g_autoptr (GtkBuilder) builder = NULL;
     GObject *dialog;
 
-    builder = gtk_builder_new_from_resource ("/org/rebuntu/reptillus/ui/nautilus-operations-ui-manager-request-passphrase.ui");
+    builder = gtk_builder_new_from_resource ("/org/gnome/nautilus/ui/nautilus-operations-ui-manager-request-passphrase.ui");
     dialog = gtk_builder_get_object (builder, "request_passphrase_dialog");
     data->passphrase_entry = GTK_PASSWORD_ENTRY (gtk_builder_get_object (builder, "entry"));
 

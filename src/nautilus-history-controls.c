@@ -301,7 +301,7 @@ nautilus_history_controls_class_init (NautilusHistoryControlsClass *klass)
     g_object_class_install_properties (object_class, N_PROPS, properties);
 
     gtk_widget_class_set_template_from_resource (widget_class,
-                                                 "/org/rebuntu/reptillus/ui/nautilus-history-controls.ui");
+                                                 "/org/gnome/nautilus/ui/nautilus-history-controls.ui");
     gtk_widget_class_bind_template_child (widget_class, NautilusHistoryControls, back_button);
     gtk_widget_class_bind_template_child (widget_class, NautilusHistoryControls, back_menu);
     gtk_widget_class_bind_template_child (widget_class, NautilusHistoryControls, forward_button);

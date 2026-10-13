@@ -597,7 +597,7 @@ nautilus_column_chooser_class_init (NautilusColumnChooserClass *chooser_class)
     oclass->dispose = nautilus_column_chooser_dispose;
     oclass->finalize = nautilus_column_chooser_finalize;
 
-    gtk_widget_class_set_template_from_resource (widget_class, "/org/rebuntu/reptillus/ui/nautilus-column-chooser.ui");
+    gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/nautilus/ui/nautilus-column-chooser.ui");
     gtk_widget_class_bind_template_child (widget_class, NautilusColumnChooser, list_box);
     gtk_widget_class_bind_template_child (widget_class, NautilusColumnChooser, window_title);
     gtk_widget_class_bind_template_child (widget_class, NautilusColumnChooser, banner);

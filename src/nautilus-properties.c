@@ -3446,7 +3446,7 @@ on_change_permissions_clicked (NautilusPropertiesWidget *self)
     GtkShortcutAction *cb_action;
     g_autoptr (GtkBuilder) change_permissions_builder = NULL;
 
-    change_permissions_builder = gtk_builder_new_from_resource ("/org/rebuntu/reptillus/ui/nautilus-file-properties-change-permissions.ui");
+    change_permissions_builder = gtk_builder_new_from_resource ("/org/gnome/nautilus/ui/nautilus-file-properties-change-permissions.ui");
 
     self->permissions_dialog = ADW_DIALOG (gtk_builder_get_object (change_permissions_builder, "change_permissions_dialog"));
 
@@ -3718,7 +3718,7 @@ static GtkWindow *
 create_properties_window (GtkWidget *content)
 {
     g_autoptr (GtkBuilder) builder = gtk_builder_new_from_resource (
-        "/org/rebuntu/reptillus/ui/nautilus-properties-window.ui");
+        "/org/gnome/nautilus/ui/nautilus-properties-window.ui");
     AdwWindow *window = ADW_WINDOW (gtk_builder_get_object (builder, "properties_window"));
 
     adw_window_set_content (window, GTK_WIDGET (content));
@@ -3989,7 +3989,7 @@ nautilus_properties_widget_class_init (NautilusPropertiesWidgetClass *klass)
                                   g_cclosure_marshal_VOID__VOID,
                                   G_TYPE_NONE, 0);
 
-    gtk_widget_class_set_template_from_resource (widget_class, "/org/rebuntu/reptillus/ui/nautilus-properties-widget.ui");
+    gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/nautilus/ui/nautilus-properties-widget.ui");
 
     gtk_widget_class_bind_template_child (widget_class, NautilusPropertiesWidget, toast_overlay);
     gtk_widget_class_bind_template_child (widget_class, NautilusPropertiesWidget, nav_view);
