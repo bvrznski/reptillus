@@ -1,0 +1,5 @@
+[Shell Search Provider]
+DesktopId=@appid@.desktop
+BusName=@appid@
+ObjectPath=/org/rebuntu/Reptillus@profile@/SearchProvider
+Version=2

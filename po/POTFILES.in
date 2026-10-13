@@ -1,9 +1,9 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
 data/nautilus-autorun-software.desktop.in
-data/org.gnome.Nautilus.desktop.in.in
+data/org.rebuntu.Reptillus.desktop.in.in
 data/org.gnome.nautilus.gschema.xml
-data/org.gnome.Nautilus.metainfo.xml.in.in
+data/org.rebuntu.Reptillus.metainfo.xml.in.in
 extensions/audio-video-properties/totem-properties-main.c
 extensions/audio-video-properties/totem-properties-view.c
 extensions/image-properties/nautilus-image-properties-model.c

@@ -21,7 +21,7 @@ desktop_conf.set('icon', application_id)
 
 desktop = i18n.merge_file(
   input: configure_file(
-    input: files('org.gnome.Nautilus.desktop.in.in'),
+    input: files('org.rebuntu.Reptillus.desktop.in.in'),
     output: 'org.gnome.Nautilus.desktop.in',
     configuration: desktop_conf
   ),
@@ -56,7 +56,7 @@ appdata_conf.set('release-version', release_version)
 
 appdata = i18n.merge_file(
   input: configure_file(
-    input: files('org.gnome.Nautilus.metainfo.xml.in.in'),
+    input: files('org.rebuntu.Reptillus.metainfo.xml.in.in'),
     output: 'org.gnome.Nautilus.metainfo.xml.in',
     configuration: appdata_conf
   ),
@@ -71,7 +71,7 @@ service_conf.set('appid', application_id)
 service_conf.set('bindir', join_paths(prefix, bindir))
 
 configure_file(
-  input: 'org.gnome.Nautilus.service.in',
+  input: 'org.rebuntu.Reptillus.service.in',
   output: '@0@.service'.format(application_id),
   configuration: service_conf,
   install_dir: servicedir
@@ -91,7 +91,7 @@ search_provider_conf.set('profile', profile)
 
 configure_file(
   configuration: search_provider_conf,
-  input: files('org.gnome.Nautilus.search-provider.ini.in'),
+  input: files('org.rebuntu.Reptillus.search-provider.ini.in'),
   install_dir: join_paths(datadir, 'gnome-shell', 'search-providers'),
   output: '@0@.search-provider.ini'.format(application_id)
 )
