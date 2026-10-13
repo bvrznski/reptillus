@@ -690,6 +690,15 @@ update_places (NautilusSidebar *sidebar)
 
     /* add built-in places */
 
+    /* Reptillus: Computer / filesystem root */
+    start_icon = g_themed_icon_new_with_default_fallbacks ("drive-harddisk-symbolic");
+    add_place (sidebar, NAUTILUS_SIDEBAR_ROW_BUILT_IN,
+               NAUTILUS_SIDEBAR_SECTION_DEFAULT_LOCATIONS,
+               _("Computer"), start_icon, NULL, "computer:///",
+               NULL, NULL, NULL, NULL, 0,
+               _("Open File System"));
+    g_object_unref (start_icon);
+
     /* home folder */
     home_uri = get_home_directory_uri ();
     start_icon = g_themed_icon_new_with_default_fallbacks (ICON_NAME_HOME);
