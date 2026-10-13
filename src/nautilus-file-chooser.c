@@ -887,7 +887,7 @@ nautilus_file_chooser_class_init (NautilusFileChooserClass *klass)
     widget_class->grab_focus = nautilus_file_chooser_grab_focus;
 
     gtk_widget_class_set_template_from_resource (widget_class,
-                                                 "/org/gnome/nautilus/ui/nautilus-file-chooser.ui");
+                                                 "/org/rebuntu/reptillus/ui/nautilus-file-chooser.ui");
     gtk_widget_class_bind_template_child (widget_class, NautilusFileChooser, split_view);
     gtk_widget_class_bind_template_child (widget_class, NautilusFileChooser, places_sidebar);
     gtk_widget_class_bind_template_child (widget_class, NautilusFileChooser, toolbar);

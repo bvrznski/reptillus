@@ -224,7 +224,7 @@ nautilus_progress_info_widget_class_init (NautilusProgressInfoWidgetClass *klass
     g_object_class_install_properties (oclass, NUM_PROPERTIES, properties);
 
     gtk_widget_class_set_template_from_resource (widget_class,
-                                                 "/org/gnome/nautilus/ui/nautilus-progress-info-widget.ui");
+                                                 "/org/rebuntu/reptillus/ui/nautilus-progress-info-widget.ui");
 
     gtk_widget_class_bind_template_child_private (widget_class, NautilusProgressInfoWidget, status);
     gtk_widget_class_bind_template_child_private (widget_class, NautilusProgressInfoWidget, details);

@@ -747,7 +747,7 @@ nautilus_sidebar_row_class_init (NautilusSidebarRowClass *klass)
     g_object_class_install_properties (object_class, LAST_PROP, properties);
 
     gtk_widget_class_set_template_from_resource (widget_class,
-                                                 "/org/gnome/nautilus/ui/nautilus-sidebar-row.ui");
+                                                 "/org/rebuntu/reptillus/ui/nautilus-sidebar-row.ui");
 
     gtk_widget_class_bind_template_child (widget_class, NautilusSidebarRow, start_icon_widget);
     gtk_widget_class_bind_template_child (widget_class, NautilusSidebarRow, end_icon_widget);

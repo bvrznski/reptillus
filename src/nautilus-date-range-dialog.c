@@ -218,7 +218,7 @@ nautilus_date_range_dialog_class_init (NautilusDateRangeDialogClass *klass)
                                         G_TYPE_NONE, 1, G_TYPE_POINTER);
 
     gtk_widget_class_set_template_from_resource (widget_class,
-                                                 "/org/gnome/nautilus/ui/nautilus-date-range-dialog.ui");
+                                                 "/org/rebuntu/reptillus/ui/nautilus-date-range-dialog.ui");
 
     gtk_widget_class_bind_template_child (widget_class, NautilusDateRangeDialog, date_range_row);
     gtk_widget_class_bind_template_child (widget_class, NautilusDateRangeDialog, single_date_row);

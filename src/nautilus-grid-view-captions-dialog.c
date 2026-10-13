@@ -196,7 +196,7 @@ nautilus_grid_view_captions_dialog_class_init (NautilusGridViewCaptionsDialogCla
 
     object_class->dispose = nautilus_grid_view_captions_dialog_dispose;
 
-    gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/nautilus/ui/nautilus-grid-view-captions-dialog.ui");
+    gtk_widget_class_set_template_from_resource (widget_class, "/org/rebuntu/reptillus/ui/nautilus-grid-view-captions-dialog.ui");
     gtk_widget_class_bind_template_child (widget_class, NautilusGridViewCaptionsDialog, captions_0_comborow);
     gtk_widget_class_bind_template_child (widget_class, NautilusGridViewCaptionsDialog, captions_1_comborow);
     gtk_widget_class_bind_template_child (widget_class, NautilusGridViewCaptionsDialog, captions_2_comborow);

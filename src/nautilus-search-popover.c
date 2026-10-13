@@ -444,7 +444,7 @@ show_other_types_dialog (NautilusSearchPopover *popover)
     filter_model = gtk_filter_list_model_new (G_LIST_MODEL (file_type_list), GTK_FILTER (filter));
     popover->other_types_model = gtk_single_selection_new (G_LIST_MODEL (filter_model));
 
-    builder = gtk_builder_new_from_resource ("/org/gnome/nautilus/ui/nautilus-search-types-dialog.ui");
+    builder = gtk_builder_new_from_resource ("/org/rebuntu/reptillus/ui/nautilus-search-types-dialog.ui");
 
     popover->type_dialog = ADW_DIALOG (gtk_builder_get_object (builder, "file_types_dialog"));
     search_entry = GTK_WIDGET (gtk_builder_get_object (builder, "search_entry"));
@@ -552,7 +552,7 @@ nautilus_search_popover_class_init (NautilusSearchPopoverClass *klass)
                                        1,
                                        G_TYPE_INT);
 
-    gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/nautilus/ui/nautilus-search-popover.ui");
+    gtk_widget_class_set_template_from_resource (widget_class, "/org/rebuntu/reptillus/ui/nautilus-search-popover.ui");
 
     gtk_widget_class_bind_template_child (widget_class, NautilusSearchPopover, type_wrap_box);
     gtk_widget_class_bind_template_child (widget_class, NautilusSearchPopover, audio_button);

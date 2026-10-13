@@ -1420,7 +1420,7 @@ nautilus_window_slot_init (NautilusWindowSlot *self)
                     self->default_view_id != NAUTILUS_VIEW_GRID_ID))
     {
         g_warning ("Invalid value stored for 'default-folder-viewer' key for "
-                   "the 'org.gnome.nautilus.preferences' schemas. Installed "
+                   "the 'org.rebuntu.reptillus.preferences' schemas. Installed "
                    "schemas may be outdated. Falling back to 'list-view'.");
         self->default_view_id = NAUTILUS_VIEW_LIST_ID;
     }

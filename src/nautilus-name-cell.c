@@ -466,7 +466,7 @@ nautilus_name_cell_class_init (NautilusNameCellClass *klass)
     g_type_ensure (NAUTILUS_TYPE_IMAGE);
 
     gtk_widget_class_set_layout_manager_type (widget_class, GTK_TYPE_BIN_LAYOUT);
-    gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/nautilus/ui/nautilus-name-cell.ui");
+    gtk_widget_class_set_template_from_resource (widget_class, "/org/rebuntu/reptillus/ui/nautilus-name-cell.ui");
 
     /* Needs to add the direct child of the template widget to dispose it since
      * a plain GtkWidget doesn't dispose it's child automatically. */

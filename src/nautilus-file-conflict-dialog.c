@@ -268,7 +268,7 @@ nautilus_file_conflict_dialog_class_init (NautilusFileConflictDialogClass *klass
 {
     GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
 
-    gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/nautilus/ui/nautilus-file-conflict-dialog.ui");
+    gtk_widget_class_set_template_from_resource (widget_class, "/org/rebuntu/reptillus/ui/nautilus-file-conflict-dialog.ui");
     gtk_widget_class_bind_template_child (widget_class, NautilusFileConflictDialog, primary_label);
     gtk_widget_class_bind_template_child (widget_class, NautilusFileConflictDialog, secondary_label);
     gtk_widget_class_bind_template_child (widget_class, NautilusFileConflictDialog, dest_label);

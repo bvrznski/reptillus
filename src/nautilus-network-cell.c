@@ -131,7 +131,7 @@ nautilus_network_cell_class_init (NautilusNetworkCellClass *klass)
     object_class->dispose = nautilus_network_cell_dispose;
     object_class->finalize = nautilus_network_cell_finalize;
 
-    gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/nautilus/ui/nautilus-network-cell.ui");
+    gtk_widget_class_set_template_from_resource (widget_class, "/org/rebuntu/reptillus/ui/nautilus-network-cell.ui");
 
     /* Needs to add the direct child of the template widget to dispose it since
      * a plain GtkWidget doesn't dispose it's child automatically. */

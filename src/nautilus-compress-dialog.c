@@ -427,7 +427,7 @@ nautilus_compress_dialog_class_init (NautilusCompressDialogClass *klass)
     object_class->dispose = nautilus_compress_dialog_dispose;
 
     gtk_widget_class_set_template_from_resource (widget_class,
-                                                 "/org/gnome/nautilus/ui/nautilus-compress-dialog.ui");
+                                                 "/org/rebuntu/reptillus/ui/nautilus-compress-dialog.ui");
 
     gtk_widget_class_bind_template_child (widget_class, NautilusCompressDialog, extension_combo_row);
     gtk_widget_class_bind_template_child (widget_class, NautilusCompressDialog, name_entry);
