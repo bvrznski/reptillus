@@ -16,13 +16,13 @@ install_headers(
 )
 install_headers(
   libnautilus_extension_headers,
-  subdir: join_paths('nautilus', 'libnautilus-extension')
+  subdir: join_paths('reptillus', 'libnautilus-extension')
 )
 
 libnautilus_extension_enums = gnome.mkenums_simple(
   'nautilus-extension-enum-types',
   install_header: true,
-  install_dir: join_paths(includedir, 'nautilus', 'libnautilus-extension'),
+  install_dir: join_paths(includedir, 'reptillus', 'libnautilus-extension'),
   sources: [
     'nautilus-info-provider.h'
   ]

@@ -77,13 +77,6 @@ configure_file(
   install_dir: servicedir
 )
 
-configure_file(
-  input: 'org.freedesktop.FileManager1.service.in',
-  output: 'org.freedesktop.FileManager1.service',
-  configuration: service_conf,
-  install_dir: servicedir
-)
-
 search_provider_conf = configuration_data()
 
 search_provider_conf.set('appid', application_id)
