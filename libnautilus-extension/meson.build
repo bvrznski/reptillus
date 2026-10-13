@@ -12,7 +12,7 @@ libnautilus_extension_headers = [
 
 install_headers(
   'nautilus-extension.h',
-  subdir: 'nautilus'
+  subdir: 'reptillus'
 )
 install_headers(
   libnautilus_extension_headers,
@@ -100,7 +100,7 @@ pkgconfig.generate(
   ],
   name: 'libreptillus-extension',
   subdirs: [
-    'nautilus'
+    'reptillus'
   ],
   requires: [
     'gio-2.0',
