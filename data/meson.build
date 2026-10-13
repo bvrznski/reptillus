@@ -34,7 +34,7 @@ desktop = i18n.merge_file(
 
 desktop_autorun_software = i18n.merge_file(
   input: 'nautilus-autorun-software.desktop.in',
-  output: 'nautilus-autorun-software.desktop',
+  output: 'reptillus-autorun-software.desktop',
   install: true,
   install_dir: desktopdir,
   po_dir: po_dir,

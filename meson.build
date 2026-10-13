@@ -28,7 +28,7 @@ includedir = get_option('includedir')
 libdir = get_option('libdir')
 localedir = get_option('localedir')
 docdir = datadir / 'doc'
-extensiondir = join_paths(libdir, 'nautilus', 'extensions-' + nautilus_extension_major_version)
+extensiondir = join_paths(libdir, 'reptillus', 'extensions-' + nautilus_extension_major_version)
 servicedir = join_paths(datadir, 'dbus-1', 'services')
 
 ###################
