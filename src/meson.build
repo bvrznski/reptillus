@@ -327,7 +327,7 @@ nautilus = executable(
 )
 
 executable(
-  'nautilus-autorun-software',
+  'reptillus-autorun-software',
   'nautilus-autorun-software.c',
   include_directories: nautilus_include_dirs,
   dependencies: [
