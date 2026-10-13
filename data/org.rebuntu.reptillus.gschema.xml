@@ -68,7 +68,7 @@
     <value value="3" nick="encrypted_zip"/>
   </enum>
 
-  <schema path="/org/rebuntu/reptillus/" id="org.rebuntu.reptillus" gettext-domain="nautilus">
+  <schema path="/org/rebuntu/reptillus/" id="org.rebuntu.reptillus" gettext-domain="reptillus">
     <child schema="org.rebuntu.reptillus.preferences" name="preferences"/>
     <child schema="org.rebuntu.reptillus.compression" name="compression"/>
     <child schema="org.rebuntu.reptillus.icon-view" name="icon-view"/>
@@ -76,7 +76,7 @@
     <child schema="org.rebuntu.reptillus.window-state" name="window-state"/>
   </schema>
 
-  <schema path="/org/rebuntu/reptillus/preferences/" id="org.rebuntu.reptillus.preferences" gettext-domain="nautilus">
+  <schema path="/org/rebuntu/reptillus/preferences/" id="org.rebuntu.reptillus.preferences" gettext-domain="reptillus">
     <key type="b" name="always-use-location-entry">
       <default>false</default>
       <summary>Always use the location entry, instead of the pathbar</summary>
@@ -190,7 +190,7 @@
     </key>
   </schema>
 
-  <schema path="/org/rebuntu/reptillus/compression/" id="org.rebuntu.reptillus.compression" gettext-domain="nautilus">
+  <schema path="/org/rebuntu/reptillus/compression/" id="org.rebuntu.reptillus.compression" gettext-domain="reptillus">
     <key name="default-compression-format" enum="org.rebuntu.reptillus.CompressionFormat">
       <default>'zip'</default>
       <summary>Default format for compressing files</summary>
@@ -198,7 +198,7 @@
     </key>
   </schema>
 
-  <schema path="/org/rebuntu/reptillus/icon-view/" id="org.rebuntu.reptillus.icon-view" gettext-domain="nautilus">
+  <schema path="/org/rebuntu/reptillus/icon-view/" id="org.rebuntu.reptillus.icon-view" gettext-domain="reptillus">
     <key type="as" name="captions">
       <default>[ 'none', 'none', 'none' ]</default>
       <summary>List of possible captions on icons</summary>
@@ -215,7 +215,7 @@
     </key>
   </schema>
 
-  <schema path="/org/rebuntu/reptillus/list-view/" id="org.rebuntu.reptillus.list-view" gettext-domain="nautilus">
+  <schema path="/org/rebuntu/reptillus/list-view/" id="org.rebuntu.reptillus.list-view" gettext-domain="reptillus">
     <key name="default-zoom-level" enum="org.rebuntu.reptillus.ListZoomLevel">
       <aliases>
         <alias value='standard' target='medium'/>
@@ -239,7 +239,7 @@
     </key>
   </schema>
 
-  <schema path="/org/rebuntu/reptillus/window-state/" id="org.rebuntu.reptillus.window-state" gettext-domain="nautilus">
+  <schema path="/org/rebuntu/reptillus/window-state/" id="org.rebuntu.reptillus.window-state" gettext-domain="reptillus">
     <key type="(ii)" name="initial-size">
       <default>(890, 550)</default>
       <summary>Initial size of the window</summary>

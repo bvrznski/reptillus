@@ -474,7 +474,7 @@ nautilus_dbus_manager_register (NautilusDBusManager  *self,
 
     success &= g_dbus_interface_skeleton_export (G_DBUS_INTERFACE_SKELETON (self->file_operations2),
                                                  connection,
-                                                 "/org/gnome/Nautilus" PROFILE "/FileOperations2",
+                                                 "/org/rebuntu/Reptillus" PROFILE "/FileOperations2",
                                                  error);
 
     if (success)

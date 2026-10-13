@@ -4,5 +4,5 @@ ontology_data = files(
 )
 
 install_data(ontology_data,
-  install_dir: join_paths(datadir, 'nautilus', 'ontology')
+  install_dir: join_paths(datadir, 'reptillus', 'ontology')
 )

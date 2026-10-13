@@ -23,8 +23,8 @@
 #include <glib-object.h>
 #include <gio/gio.h>
 
-#define NAUTILUS_FDO_DBUS_IFACE "org.freedesktop.FileManager1"
-#define NAUTILUS_FDO_DBUS_NAME  "org.freedesktop.FileManager1"
+#define NAUTILUS_FDO_DBUS_IFACE "org.rebuntu.Reptillus.FileManager1"
+#define NAUTILUS_FDO_DBUS_NAME  "org.rebuntu.Reptillus.FileManager1"
 #define NAUTILUS_FDO_DBUS_PATH  "/org/freedesktop/FileManager1"
 
 #define NAUTILUS_TYPE_FREEDESKTOP_DBUS nautilus_freedesktop_dbus_get_type()
