@@ -100,5 +100,14 @@ template $NautilusToolbar: Adw.Bin {
       action-name: "view.new-folder";
       focus-on-click: false;
     }
+
+    [end]
+    Button rebuntu_terminal_button {
+      visible: true;
+      icon-name: "utilities-terminal-symbolic";
+      tooltip-text: _("Open Current Folder in Terminal");
+      action-name: "win.open-current-folder-in-terminal";
+      focus-on-click: false;
+    }
   }
 }

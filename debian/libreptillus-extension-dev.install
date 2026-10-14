@@ -1,0 +1,4 @@
+usr/include/reptillus/
+usr/lib/*/libreptillus-extension.so
+usr/lib/*/pkgconfig/libreptillus-extension-4.pc
+usr/share/gir-1.0/Reptillus-4.1.gir

@@ -1,0 +1,447 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Reptillus
+Source: https://github.com/bvrznski/reptillus
+Comment: DRAFT ONLY — INCOMPLETE, NOT FOR DISTRIBUTION.
+ This candidate covers only explicit SPDX evidence with copyright notices.
+ It does not establish license-text completeness or redistribution clearance.
+
+Files: .editorconfig
+Copyright: Text: 2021 The Nautilus Authors
+License: CC0-1.0
+
+Files: docs/reference/urlmap.js
+Copyright: Text: 2021 GNOME Foundation
+License: LGPL-2.1-or-later
+
+Files: libnautilus-extension/nautilus-properties-item.c
+Copyright: (C) 2022 António Fernandes <antoniof@gnome.org>
+License: GPL-2.0-or-later
+
+Files: libnautilus-extension/nautilus-properties-item.h
+Copyright: (C) 2022 António Fernandes <antoniof@gnome.org>
+License: GPL-2.0-or-later
+
+Files: libnautilus-extension/nautilus-properties-model-provider.c
+Copyright: (C) 2022 The GNOME project contributors
+License: GPL-2.0-or-later
+
+Files: libnautilus-extension/nautilus-properties-model-provider.h
+Copyright: (C) 2022 The GNOME project contributors
+License: GPL-2.0-or-later
+
+Files: libnautilus-extension/nautilus-properties-model.c
+Copyright: (C) 2022 The GNOME project contributors
+License: GPL-2.0-or-later
+
+Files: libnautilus-extension/nautilus-properties-model.h
+Copyright: (C) 2022 The GNOME project contributors
+License: GPL-2.0-or-later
+
+Files: src/nautilus-app-chooser-widget.c
+Copyright: (C) 2004 Novell, Inc.
+License: GPL-3.0-or-later
+
+Files: src/nautilus-app-chooser-widget.h
+Copyright: (C) 2004 Novell, Inc.
+License: GPL-3.0-or-later
+
+Files: src/nautilus-app-chooser.c
+Copyright: (C) 2022 António Fernandes <antoniof@gnome.org>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-app-chooser.h
+Copyright: (C) 2022 António Fernandes <antoniof@gnome.org>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-compress-dialog.c
+Copyright: (C) 2023 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-compress-dialog.h
+Copyright: (C) 2023 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-date-entry-row.c
+Copyright: (C) 2025 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-date-entry-row.h
+Copyright: (C) 2025 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-date-range-dialog.c
+Copyright: (C) 2025 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-date-range-dialog.h
+Copyright: (C) 2025 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-date-utilities.c
+Copyright: (C) 2023 The GNOME project contributors
+License: GPL-2.0-or-later
+
+Files: src/nautilus-date-utilities.h
+Copyright: (C) 2023 The GNOME project contributors
+License: GPL-2.0-or-later
+
+Files: src/nautilus-dbus-launcher.c
+Copyright: (C) 2022 Corey Berla <corey@berla.me>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-dbus-launcher.h
+Copyright: (C) 2022 Corey Berla <corey@berla.me>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-dialog-utilities.c
+Copyright: (C) 2023 The GNOME project contributors
+License: GPL-2.0-or-later
+
+Files: src/nautilus-dialog-utilities.h
+Copyright: (C) 2023 The GNOME project contributors
+License: GPL-2.0-or-later
+
+Files: src/nautilus-dnd.c
+Copyright: (C) 2000, 2001 Eazel, Inc.
+License: GPL-3.0-or-later
+
+Files: src/nautilus-dnd.h
+Copyright: (C) 2000 Eazel, Inc.
+License: GPL-3.0-or-later
+
+Files: src/nautilus-fd-holder.c
+Copyright: (C) 2023 António Fernandes <antoniof@gnome.org>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-fd-holder.h
+Copyright: (C) 2023 António Fernandes <antoniof@gnome.org>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-file-chooser.c
+Copyright: (C) 2024 GNOME Foundation Inc.
+License: GPL-3.0-or-later
+
+Files: src/nautilus-file-chooser.h
+Copyright: (C) 2024 GNOME Foundation Inc.
+License: GPL-3.0-or-later
+
+Files: src/nautilus-filename-utilities.c
+Copyright: (C) 2023 The GNOME project contributors
+License: GPL-2.0-or-later
+
+Files: src/nautilus-filename-utilities.h
+Copyright: (C) 2023 The GNOME project contributors
+License: GPL-2.0-or-later
+
+Files: src/nautilus-filename-validator.c
+Copyright: (C) 2016 the Nautilus developers
+License: GPL-2.0-or-later
+
+Files: src/nautilus-filename-validator.h
+Copyright: (C) 2016 the Nautilus developers
+License: GPL-2.0-or-later
+
+Files: src/nautilus-grid-cell.c
+Copyright: (C) 2022 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-grid-cell.h
+Copyright: (C) 2022 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-grid-view-captions-dialog.c
+Copyright: © 2026 Khalid Abu Shawarib <kas@gnome.org>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-grid-view-captions-dialog.h
+Copyright: © 2026 Khalid Abu Shawarib <kas@gnome.org>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-grid-view.c
+Copyright: (C) 2022 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-grid-view.h
+Copyright: (C) 2022 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-history-controls.c
+Copyright: (C) 2022 The GNOME project contributors
+License: GPL-2.0-or-later
+
+Files: src/nautilus-history-controls.h
+Copyright: (C) 2022 The GNOME project contributors
+License: GPL-2.0-or-later
+
+Files: src/nautilus-image.c
+Copyright: © 2025 The Files contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-image.h
+Copyright: © 2025 The Files contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-internal-place-file.c
+Copyright: (C) 2024 GNOME Foundation Inc.
+License: GPL-3.0-or-later
+
+Files: src/nautilus-internal-place-file.h
+Copyright: (C) 2024 GNOME Foundation Inc.
+License: GPL-3.0-or-later
+
+Files: src/nautilus-label-cell.c
+Copyright: (C) 2022 António Fernandes <antoniof@gnome.org>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-label-cell.h
+Copyright: (C) 2022 António Fernandes <antoniof@gnome.org>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-list-base-private.h
+Copyright: (C) 2022 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-list-base.c
+Copyright: (C) 2022 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-list-base.h
+Copyright: (C) 2022 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-list-view.c
+Copyright: (C) 2000 Eazel, Inc.
+License: GPL-3.0-or-later
+
+Files: src/nautilus-list-view.h
+Copyright: (C) 2000 Eazel, Inc.
+License: GPL-3.0-or-later
+
+Files: src/nautilus-localsearch-utilities.c
+Copyright: 2019 Carlos Soriano <csoriano@redhat.com>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-localsearch-utilities.h
+Copyright: 2019 Carlos Soriano <csoriano@redhat.com>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-minimal-cell.c
+Copyright: © 2024 The Files contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-minimal-cell.h
+Copyright: © 2024 The Files contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-name-cell.c
+Copyright: (C) 2022 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-name-cell.h
+Copyright: (C) 2022 António Fernandes <antoniof@gnome.org>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-network-address-bar.c
+Copyright: (C) 2015 Georges Basile Stavracas Neto <georges.stavracas@gmail.com>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-network-address-bar.h
+Copyright: (C) 2022 António Fernandes <antoniof@gnome.org>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-network-cell.c
+Copyright: (C) 2024 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-network-cell.h
+Copyright: (C) 2024 António Fernandes <antoniof@gnome.org>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-network-directory.c
+Copyright: (C) 2024 António Fernandes <antoniof@gnome.org>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-network-directory.h
+Copyright: (C) 2024 António Fernandes <antoniof@gnome.org>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-network-view.c
+Copyright: (C) 2024 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-network-view.h
+Copyright: (C) 2024 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-new-folder-dialog.c
+Copyright: (C) 2023 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-new-folder-dialog.h
+Copyright: (C) 2023 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-portal.c
+Copyright: (C) 2024 GNOME Foundation Inc.
+License: GPL-3.0-or-later
+
+Files: src/nautilus-portal.h
+Copyright: (C) 2024 GNOME Foundation Inc.
+License: GPL-3.0-or-later
+
+Files: src/nautilus-progress-indicator.c
+Copyright: (C) 2022 The GNOME project contributors
+License: GPL-2.0-or-later
+
+Files: src/nautilus-progress-indicator.h
+Copyright: (C) 2022 The GNOME project contributors
+License: GPL-2.0-or-later
+
+Files: src/nautilus-progress-paintable.c
+Copyright: © 2022 Purism SPC
+License: GPL-3.0-or-later
+
+Files: src/nautilus-recent-servers.c
+Copyright: (C) 2015 Georges Basile Stavracas Neto <georges.stavracas@gmail.com>
+License: LGPL-2.1-or-later
+
+Files: src/nautilus-recent-servers.h
+Copyright: (C) 2024 António Fernandes <antoniof@gnome.org>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-rename-file-popover.c
+Copyright: (C) 2023 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-rename-file-popover.h
+Copyright: (C) 2023 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-scheme.c
+Copyright: (C) 2024 Peter Eisenmann <p3732@getgoogleoff.me>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-scheme.h
+Copyright: (C) 2023 Peter Eisenmann <p3732@getgoogleoff.me>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-search-engine.c
+Copyright: (C) 2005 Novell, Inc.
+License: GPL-2.0-or-later
+
+Files: src/nautilus-search-engine.h
+Copyright: (C) 2005 Novell, Inc.
+License: GPL-2.0-or-later
+
+Files: src/nautilus-search-provider.c
+Copyright: (C) 2012 Red Hat, Inc.
+License: GPL-2.0-or-later
+
+Files: src/nautilus-search-provider.h
+Copyright: (C) 2012 Red Hat, Inc.
+License: GPL-2.0-or-later
+
+Files: src/nautilus-shortcut-manager.c
+Copyright: (C) 2024 GNOME Foundation Inc.
+License: GPL-3.0-or-later
+
+Files: src/nautilus-shortcut-manager.h
+Copyright: (C) 2024 GNOME Foundation Inc.
+License: GPL-3.0-or-later
+
+Files: src/nautilus-sidebar-row.c
+Copyright: (C) 2015 Carlos Soriano <csoriano@gnome.org>
+License: GPL-2.1-or-later
+
+Files: src/nautilus-sidebar-row.h
+Copyright: (C) 2015 Carlos Soriano <csoriano@gnome.org>
+License: GPL-2.1-or-later
+
+Files: src/nautilus-sidebar.h
+Copyright: (C) 2015 Red Hat
+License: GPL-2.1-or-later
+
+Files: src/nautilus-star-cell.c
+Copyright: (C) 2022 António Fernandes <antoniof@gnome.org>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-star-cell.h
+Copyright: (C) 2022 António Fernandes <antoniof@gnome.org>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-view-cell.c
+Copyright: (C) 2022 2022 António Fernandes <antoniof@gnome.org>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-view-cell.h
+Copyright: (C) 2022 António Fernandes <antoniof@gnome.org>
+License: GPL-3.0-or-later
+
+Files: src/nautilus-view-controls.c
+Copyright: (C) 2022 The GNOME project contributors
+License: GPL-2.0-or-later
+
+Files: src/nautilus-view-controls.h
+Copyright: (C) 2022 The GNOME project contributors
+License: GPL-2.0-or-later
+
+Files: src/nautilus-view-info.h
+Copyright: (C) 2024 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-view-item-filter.c
+Copyright: (C) 2024 GNOME Foundation Inc.
+License: GPL-3.0-or-later
+
+Files: src/nautilus-view-item-filter.h
+Copyright: (C) 2024 GNOME Foundation Inc.
+License: GPL-3.0-or-later
+
+Files: src/nautilus-view-item.c
+Copyright: (C) 2022 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/nautilus-view-item.h
+Copyright: (C) 2022 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/rebuntu-computer-view.c
+Copyright: (C) 2024 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: src/rebuntu-computer-view.h
+Copyright: (C) 2024 The GNOME project contributors
+License: GPL-3.0-or-later
+
+Files: test/automated/display/test-file-operations-create.c
+Copyright: © 2025 Khalid Abu Shawarib
+License: GPL-3.0-or-later
+
+Files: test/automated/display/test-files-view.c
+Copyright: © 2025 Khalid Abu Shawarib <kas@gnome.org>
+License: GPL-3.0-or-later
+
+Files: test/automated/display/test-portal-file-chooser.c
+Copyright: (C) 2026 Khalid Abu Shawarib.
+License: GPL-3.0-or-later
+
+Files: test/automated/displayless/test-file-operations-archive.c
+Copyright: © 2025 The Files contributors
+License: GPL-3.0-or-later
+
+Files: test/automated/displayless/test-file-operations-link.c
+Copyright: © 2025 Khalid Abu Shawarib
+License: GPL-3.0-or-later
+
+Files: test/automated/displayless/test-file-operations-rename.c
+Copyright: © 2026 Khalid Abu Shawarib
+License: GPL-3.0-or-later
+
+Files: test/automated/displayless/test-thumbnails.c
+Copyright: © 2025 Khalid Abu Shawarib
+License: GPL-3.0-or-later
+
+Files: test/automated/test-utilities.c
+Copyright: © 2025 Khalid Abu Shawarib
+License: GPL-3.0-or-later
+

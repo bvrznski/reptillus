@@ -1083,10 +1083,67 @@ extra_drag_drop_cb (AdwTabBar    *self,
     return nautilus_dnd_perform_drop (view, value, action, target_location);
 }
 
+/* Reptillus: open the active local folder in a terminal, without shell expansion. */
+static void
+rebuntu_open_terminal_cb (GSimpleAction *action,
+                          GVariant      *parameter,
+                          gpointer       user_data)
+{
+    NautilusWindow *window = NAUTILUS_WINDOW (user_data);
+    g_autofree char *path = NULL;
+    g_autoptr (GSubprocessLauncher) launcher = NULL;
+    g_autoptr (GSubprocess) process = NULL;
+    g_autoptr (GError) error = NULL;
+    const char *program = NULL;
+    const char *argv[4] = { NULL, NULL, NULL, NULL };
+
+    if (window->active_slot == NULL)
+        return;
+
+    GFile *location = nautilus_window_slot_get_location (window->active_slot);
+    if (location == NULL || !g_file_is_native (location))
+        return;
+
+    path = g_file_get_path (location);
+    if (path == NULL || !g_file_test (path, G_FILE_TEST_IS_DIR))
+        return;
+
+    /* Prefer the GNOME terminal applications; avoid invoking a shell. */
+    if (g_find_program_in_path ("kgx") != NULL)
+    {
+        program = "kgx";
+        argv[1] = "--working-directory";
+        argv[2] = path;
+    }
+    else if (g_find_program_in_path ("gnome-terminal") != NULL)
+    {
+        program = "gnome-terminal";
+        argv[1] = "--working-directory";
+        argv[2] = path;
+    }
+    else if (g_find_program_in_path ("xterm") != NULL)
+    {
+        program = "xterm";
+    }
+    else
+    {
+        g_warning ("No supported terminal application found (kgx, gnome-terminal, xterm)");
+        return;
+    }
+
+    argv[0] = program;
+    launcher = g_subprocess_launcher_new (G_SUBPROCESS_FLAGS_NONE);
+    g_subprocess_launcher_set_cwd (launcher, path);
+    process = g_subprocess_launcher_spawnv (launcher, argv, &error);
+    if (process == NULL)
+        g_warning ("Could not open terminal: %s", error->message);
+}
+
 const GActionEntry win_entries[] =
 {
     { .name = "current-location-menu", .activate = action_show_current_location_menu },
     { .name = "new-tab", .activate = action_new_tab },
+    { .name = "open-current-folder-in-terminal", .activate = rebuntu_open_terminal_cb },
     { .name = "undo", .activate = action_undo },
     { .name = "redo", .activate = action_redo },
     /* Only accessible by shortcuts */
@@ -1118,6 +1175,7 @@ nautilus_window_initialize_actions (NautilusWindow *window)
 
     app = g_application_get_default ();
     nautilus_application_set_accelerator (app, "win.new-tab", "<control>t");
+    nautilus_application_set_accelerator (app, "win.open-current-folder-in-terminal", "<control><alt>t");
     nautilus_application_set_accelerator (app, "win.close-current-view", "<control>w");
 
     nautilus_application_set_accelerator (app, "win.undo", "<control>z");

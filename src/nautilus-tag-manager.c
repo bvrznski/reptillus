@@ -673,8 +673,12 @@ setup_database (NautilusTagManager  *self,
 
     datadir = NAUTILUS_DATADIR;
 
-    store_path = g_build_filename (g_get_user_data_dir (), "nautilus", "tags", NULL);
-    ontology_path = g_build_filename (datadir, "ontology", NULL);
+    store_path = g_build_filename (g_get_user_data_dir (), "reptillus", "tags", NULL);
+    g_autofree gchar *ontology_share_dir = g_path_get_dirname (datadir);
+    const gchar *ontology_override = g_getenv ("REPTILLUS_ONTOLOGY_DIR");
+    ontology_path = ontology_override != NULL && *ontology_override != '\0'
+                    ? g_strdup (ontology_override)
+                    : g_build_filename (ontology_share_dir, "reptillus", "ontology", NULL);
 
     store = g_file_new_for_path (store_path);
     ontology = g_file_new_for_path (ontology_path);

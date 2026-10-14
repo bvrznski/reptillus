@@ -1,0 +1,6 @@
+STAGE 52 IS A SCAFFOLD, NOT A RELEASE PACKAGE.
+Before dpkg-buildpackage: replace Maintainer in control and changelog with a real
+project contact, supply accurate debian/copyright from upstream licenses, verify
+build dependencies with `apt build-dep`, and adapt .install to actual meson output.
+Do not invent license or contact metadata. GIR deps need distro-appropriate tooling.
+Check all Lintian errors, ABI, activation, and lifecycle before RC1.

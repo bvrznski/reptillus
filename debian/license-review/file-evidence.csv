@@ -1,0 +1,598 @@
+path,spdx,copyright,classification
+.editorconfig,CC0-1.0,CopyrightText: 2021 The Nautilus Authors,SPDX_AND_NOTICE
+.git-blame-ignore-revs,,,NO_EXPLICIT_EVIDENCE
+.gitattributes,,,NO_EXPLICIT_EVIDENCE
+.gitignore,,,NO_EXPLICIT_EVIDENCE
+.gitlab-ci.yml,,,NO_EXPLICIT_EVIDENCE
+.gitlab/image-script.sh,,,NO_EXPLICIT_EVIDENCE
+.gitlab/issue_templates/Bug.md,,,NO_EXPLICIT_EVIDENCE
+.gitlab/issue_templates/Default.md,,,NO_EXPLICIT_EVIDENCE
+.gitlab/issue_templates/Feature.md,,,NO_EXPLICIT_EVIDENCE
+.gitlab/issue_templates/Shortcoming.md,,,NO_EXPLICIT_EVIDENCE
+CONTRIBUTING.md,,,NO_EXPLICIT_EVIDENCE
+LICENSE,,"Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/> | copyright on the software, and (2) offer you this License | Copyright"" also means copyright-like laws that apply to other kinds of | copyrightable work licensed under this | copyright permission, other than the making of an | copyright law, except executing it on a | copyright notice, and (2) | copyright on the Program, and are irrevocable provided the stated",NOTICE_NO_SPDX
+NEWS,,,NO_EXPLICIT_EVIDENCE
+README.md,,,NO_EXPLICIT_EVIDENCE
+assets/reptillus-banner.png,,,NO_EXPLICIT_EVIDENCE
+build-aux/check-potfiles.sh,,,NO_EXPLICIT_EVIDENCE
+build-aux/create-release.sh,,,NO_EXPLICIT_EVIDENCE
+build-aux/flatpak/org.gnome.Nautilus.json,,,NO_EXPLICIT_EVIDENCE
+build-aux/leak-suppress.txt,,,NO_EXPLICIT_EVIDENCE
+build-aux/lineup-parameters,,Copyright © 2019 Michael Catanzaro <mcatanzaro@gnome.org>,NOTICE_NO_SPDX
+build-aux/run-uncrustify.sh,,,NO_EXPLICIT_EVIDENCE
+build-aux/thread-suppress.txt,,,NO_EXPLICIT_EVIDENCE
+build-aux/uncrustify.cfg,,,NO_EXPLICIT_EVIDENCE
+data/dbus-interfaces2.xml,,"Copyright (C) 2011 Red Hat, Inc.",NOTICE_NO_SPDX
+data/freedesktop-dbus-interfaces.xml,,,NO_EXPLICIT_EVIDENCE
+data/icons/hicolor/scalable/apps/org.gnome.Nautilus.svg,,,NO_EXPLICIT_EVIDENCE
+data/icons/hicolor/scalable/apps/org.gnome.NautilusDevel.svg,,,NO_EXPLICIT_EVIDENCE
+data/icons/hicolor/symbolic/apps/org.gnome.Nautilus-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+data/meson.build,,,NO_EXPLICIT_EVIDENCE
+data/nautilus-autorun-software.desktop.in,,,NO_EXPLICIT_EVIDENCE
+data/ontology/meson.build,,,NO_EXPLICIT_EVIDENCE
+data/ontology/nautilus.description,,,NO_EXPLICIT_EVIDENCE
+data/ontology/nautilus.ontology,,,NO_EXPLICIT_EVIDENCE
+data/org.freedesktop.FileManager1.service.in,,,NO_EXPLICIT_EVIDENCE
+data/org.gnome.Nautilus.Source.svg,,,NO_EXPLICIT_EVIDENCE
+data/org.gnome.Nautilus.desktop.in.in,,,NO_EXPLICIT_EVIDENCE
+data/org.gnome.Nautilus.metainfo.xml.in.in,,,NO_EXPLICIT_EVIDENCE
+data/org.gnome.Nautilus.search-provider.ini.in,,,NO_EXPLICIT_EVIDENCE
+data/org.gnome.Nautilus.service.in,,,NO_EXPLICIT_EVIDENCE
+data/org.gnome.nautilus.gschema.xml,,,NO_EXPLICIT_EVIDENCE
+data/org.rebuntu.Reptillus.desktop.in.in,,,NO_EXPLICIT_EVIDENCE
+data/org.rebuntu.Reptillus.metainfo.xml.in.in,,,NO_EXPLICIT_EVIDENCE
+data/org.rebuntu.Reptillus.search-provider.ini.in,,,NO_EXPLICIT_EVIDENCE
+data/org.rebuntu.Reptillus.service.in,,,NO_EXPLICIT_EVIDENCE
+data/org.rebuntu.reptillus.gschema.xml,,,NO_EXPLICIT_EVIDENCE
+data/shell-search-provider-dbus-interfaces.xml,,,NO_EXPLICIT_EVIDENCE
+debian/README.STAGE52,,"copyright from upstream licenses, verify",NOTICE_NO_SPDX
+debian/changelog,,,NO_EXPLICIT_EVIDENCE
+debian/control,,,NO_EXPLICIT_EVIDENCE
+debian/gir1.2-reptillus-4.1.install,,,NO_EXPLICIT_EVIDENCE
+debian/libreptillus-extension-dev.install,,,NO_EXPLICIT_EVIDENCE
+debian/libreptillus-extension4.install,,,NO_EXPLICIT_EVIDENCE
+debian/reptillus.install,,,NO_EXPLICIT_EVIDENCE
+debian/rules,,,NO_EXPLICIT_EVIDENCE
+debian/source/format,,,NO_EXPLICIT_EVIDENCE
+docs/Overview.md,,,NO_EXPLICIT_EVIDENCE
+docs/meson.build,,,NO_EXPLICIT_EVIDENCE
+docs/nautilus-autorun-software.1,,,NO_EXPLICIT_EVIDENCE
+docs/nautilus.1,,,NO_EXPLICIT_EVIDENCE
+docs/reference/logo.svg,,,NO_EXPLICIT_EVIDENCE
+docs/reference/meson.build,,,NO_EXPLICIT_EVIDENCE
+docs/reference/nautilus.toml.in,,,NO_EXPLICIT_EVIDENCE
+docs/reference/urlmap.js,LGPL-2.1-or-later,CopyrightText: 2021 GNOME Foundation,SPDX_AND_NOTICE
+extensions/audio-video-properties/meson.build,,,NO_EXPLICIT_EVIDENCE
+extensions/audio-video-properties/totem-gst-helpers.c,,Copyright (C) 2003-2007 the GStreamer project | Copyright (C) 2005-2008 Tim-Philipp Müller <tim centricular net> | Copyright (C) 2009 Sebastian Dröge <sebastian.droege@collabora.co.uk> | Copyright © 2009 Christian Persch,NOTICE_NO_SPDX
+extensions/audio-video-properties/totem-gst-helpers.h,,"Copyright (C) 2001,2002,2003,2004,2005 Bastien Nocera <hadess@hadess.net>",NOTICE_NO_SPDX
+extensions/audio-video-properties/totem-mime-types.h,,,NO_EXPLICIT_EVIDENCE
+extensions/audio-video-properties/totem-properties-main.c,,"Copyright (C) 2000, 2001 Eazel Inc. | Copyright (C) 2003  Andrew Sobala <aes@gnome.org> | Copyright (C) 2005  Bastien Nocera <hadess@hadess.net>",NOTICE_NO_SPDX
+extensions/audio-video-properties/totem-properties-view.c,,Copyright (C) 2003  Andrew Sobala <aes@gnome.org> | Copyright (C) 2004  Bastien Nocera <hadess@hadess.net> | Copyright (C) 2002 Bastien Nocera,NOTICE_NO_SPDX
+extensions/audio-video-properties/totem-properties-view.h,,Copyright (C) 2003  Andrew Sobala <aes@gnome.org> | Copyright (C) 2005  Bastien Nocera <hadess@hadess.net>,NOTICE_NO_SPDX
+extensions/image-properties/meson.build,,,NO_EXPLICIT_EVIDENCE
+extensions/image-properties/nautilus-image-properties-model-provider.c,,"Copyright (C) 2004 Red Hat, Inc | Copyright (c) 2007 Novell, Inc. | Copyright (c) 2017 Thomas Bechtold <thomasbechtold@jpberlin.de> | Copyright (c) 2018 Ernestas Kulik <ernestask@gnome.org>",NOTICE_NO_SPDX
+extensions/image-properties/nautilus-image-properties-model-provider.h,,Copyright (C) 2018 Ernestas Kulik <ernestask@gnome.org>,NOTICE_NO_SPDX
+extensions/image-properties/nautilus-image-properties-model.c,,"Copyright (C) 2004 Red Hat, Inc | Copyright (c) 2007 Novell, Inc. | Copyright (c) 2017 Thomas Bechtold <thomasbechtold@jpberlin.de> | Copyright""));",NOTICE_NO_SPDX
+extensions/image-properties/nautilus-image-properties-model.h,,"Copyright (C) 2004 Red Hat, Inc",NOTICE_NO_SPDX
+extensions/image-properties/nautilus-image-properties-module.c,,Copyright (C) 2018 Ernestas Kulik <ernestask@gnome.org>,NOTICE_NO_SPDX
+extensions/meson.build,,,NO_EXPLICIT_EVIDENCE
+gcovr.cfg,,,NO_EXPLICIT_EVIDENCE
+libnautilus-extension/LICENSE,,"Copyright (C) 1991, 1999 Free Software Foundation, Inc. | copyright the | copyright holder or | copyright law: that is to say, a work containing the Library or a | copyright notice and disclaimer of warranty; keep intact | copyright notices, you must include the | copyright notice for the Library among them, as well as a reference | copyrighted interfaces, the",NOTICE_NO_SPDX
+libnautilus-extension/meson.build,,,NO_EXPLICIT_EVIDENCE
+libnautilus-extension/nautilus-column-provider.c,,"Copyright (C) 2003 Novell, Inc.",NOTICE_NO_SPDX
+libnautilus-extension/nautilus-column-provider.h,,"Copyright (C) 2003 Novell, Inc.",NOTICE_NO_SPDX
+libnautilus-extension/nautilus-column.c,,"Copyright (C) 2003 Novell, Inc.",NOTICE_NO_SPDX
+libnautilus-extension/nautilus-column.h,,"Copyright (C) 2003 Novell, Inc.",NOTICE_NO_SPDX
+libnautilus-extension/nautilus-extension-private.h,,"Copyright (C) 2009 Red Hat, Inc.",NOTICE_NO_SPDX
+libnautilus-extension/nautilus-extension.h,,Copyright (C) 2018 Ernestas Kulik <ernestask@gnome.org>,NOTICE_NO_SPDX
+libnautilus-extension/nautilus-file-info.c,,"Copyright (C) 2003 Novell, Inc.",NOTICE_NO_SPDX
+libnautilus-extension/nautilus-file-info.h,,"Copyright (C) 2003 Novell, Inc.",NOTICE_NO_SPDX
+libnautilus-extension/nautilus-info-provider.c,,"Copyright (C) 2003 Novell, Inc.",NOTICE_NO_SPDX
+libnautilus-extension/nautilus-info-provider.h,,"Copyright (C) 2003 Novell, Inc.",NOTICE_NO_SPDX
+libnautilus-extension/nautilus-menu-item.c,,"Copyright (C) 2003 Novell, Inc.",NOTICE_NO_SPDX
+libnautilus-extension/nautilus-menu-provider.c,,"Copyright (C) 2003 Novell, Inc.",NOTICE_NO_SPDX
+libnautilus-extension/nautilus-menu-provider.h,,"Copyright (C) 2003 Novell, Inc.",NOTICE_NO_SPDX
+libnautilus-extension/nautilus-menu.c,,Copyright (C) 2005 Raffaele Sandrini,NOTICE_NO_SPDX
+libnautilus-extension/nautilus-menu.h,,"Copyright (C) 2005 Raffaele Sandrini | Copyright (C) 2003 Novell, Inc.",NOTICE_NO_SPDX
+libnautilus-extension/nautilus-properties-item.c,GPL-2.0-or-later,Copyright (C) 2022 António Fernandes <antoniof@gnome.org>,SPDX_AND_NOTICE
+libnautilus-extension/nautilus-properties-item.h,GPL-2.0-or-later,Copyright (C) 2022 António Fernandes <antoniof@gnome.org>,SPDX_AND_NOTICE
+libnautilus-extension/nautilus-properties-model-provider.c,GPL-2.0-or-later,Copyright (C) 2022 The GNOME project contributors,SPDX_AND_NOTICE
+libnautilus-extension/nautilus-properties-model-provider.h,GPL-2.0-or-later,Copyright (C) 2022 The GNOME project contributors,SPDX_AND_NOTICE
+libnautilus-extension/nautilus-properties-model.c,GPL-2.0-or-later,Copyright (C) 2022 The GNOME project contributors,SPDX_AND_NOTICE
+libnautilus-extension/nautilus-properties-model.h,GPL-2.0-or-later,Copyright (C) 2022 The GNOME project contributors,SPDX_AND_NOTICE
+meson.build,,,NO_EXPLICIT_EVIDENCE
+meson_options.txt,,,NO_EXPLICIT_EVIDENCE
+nautilus.doap,,,NO_EXPLICIT_EVIDENCE
+po/LINGUAS,,,NO_EXPLICIT_EVIDENCE
+po/POTFILES.in,,,NO_EXPLICIT_EVIDENCE
+po/POTFILES.skip,,,NO_EXPLICIT_EVIDENCE
+po/ab.po,,"Copyright""",NOTICE_NO_SPDX
+po/af.po,,"Copyright (C) | Copyright""",NOTICE_NO_SPDX
+po/am.po,,"Copyright (C) 2002 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/an.po,,Copyright (C) 2012 nautilus's COPYRIGHT HOLDER,NOTICE_NO_SPDX
+po/ar.po,,Copyright (C) 2004 THE nautilus.HEAD.ar'S COPYRIGHT HOLDER.,NOTICE_NO_SPDX
+po/as.po,,Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER,NOTICE_NO_SPDX
+po/ast.po,,"Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006",NOTICE_NO_SPDX
+po/az.po,,"Copyright (C) 2000,2003, 2004 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/be.po,,,NO_EXPLICIT_EVIDENCE
+po/be@latin.po,,Copyright (C) 2007 THE Nautilus'S COPYRIGHT HOLDER,NOTICE_NO_SPDX
+po/bg.po,,"Copyright (C) 2002, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc. | Copyright (C) 2009, 2010, 2011, 2012, 2014, 2015 Free Software Foundation, Inc. | Copyright (C) 2016, 2017 Free Software Foundation, Inc. | Copyright (C) 2021, 2022, 2023, 2024, 2026 Alexander Shopov. | Copyright (C) 2024, 2025, 2026 twlvnn kraftwerk <kraft_werk@tutanota.com>.",NOTICE_NO_SPDX
+po/bn.po,,Copyright (C) 2003-2006 The Nautilus Authors.,NOTICE_NO_SPDX
+po/bn_IN.po,,Copyright (C) 2003-2006 The Nautilus Authors.,NOTICE_NO_SPDX
+po/bo.po,,Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011,NOTICE_NO_SPDX
+po/br.po,,"Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006",NOTICE_NO_SPDX
+po/bs.po,,,NO_EXPLICIT_EVIDENCE
+po/ca.po,,"Copyright © 2000-2009 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/ca@valencia.po,,"Copyright © 2000-2009 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/ckb.po,,"Copyright (C) 2020 nautilus's COPYRIGHT HOLDER | Copyright""",NOTICE_NO_SPDX
+po/crh.po,,,NO_EXPLICIT_EVIDENCE
+po/cs.po,,"Copyright (C) 2001, 2003, 2006, 2007, 2008, 2009 the author(s) of Nautilus. | Copyright (C) 2004, 2005, 2006 Miloslav Trmac <mitr@volny.cz>. | Copyright (C) 2006 Lukas Novotny <lukasnov@cvs.gnome.org>.",NOTICE_NO_SPDX
+po/cy.po,,,NO_EXPLICIT_EVIDENCE
+po/da.po,,"Copyright (C) 2000-2009, 2011, 2012, 2014-2019",NOTICE_NO_SPDX
+po/de.po,,"Copyright (C) 2000-2004, 2007 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/dz.po,,"Copyright @ 2006 Free software foundation, Inc.",NOTICE_NO_SPDX
+po/el.po,,"Copyright (C) 2000 - 2011 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/en@shaw.po,,Copyright (C) 2010 The Gnome Foundation.,NOTICE_NO_SPDX
+po/en_CA.po,,Copyright (C) 2012 Nautilus' COPYRIGHT HOLDER,NOTICE_NO_SPDX
+po/en_GB.po,,Copyright (C) 2003 The GNOME Foundation,NOTICE_NO_SPDX
+po/eo.po,,"Copyright (C) 2006 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/es.po,,"Copyright © 2000-2003, 2006, 2007, 2008 Free Software Foundation, Inc. | Copyright (C) 2000,2002, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/et.po,,"Copyright (C) 2002–2006 Free Software Foundation, Inc. | Copyright (C) 2007–2011 The GNOME Project.",NOTICE_NO_SPDX
+po/eu.po,,"Copyright (C) 2001, 2004, 2006, 2007, 2008, 2009, 2010, 2011 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/fa.po,,Copyright (C) 2010-2011 Iranian Free Software Users Group (IFSUG.org)translation team.,NOTICE_NO_SPDX
+po/fi.po,,"Copyright (C) 2002-2009 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/fo.po,,Copyright (C) 2022 gnome-logs's COPYRIGHT HOLDER,NOTICE_NO_SPDX
+po/fr.po,,"Copyright (C) 2000-2020 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/fur.po,,"Copyright (C) 2007 Free Software Foundation, Inc",NOTICE_NO_SPDX
+po/fy.po,,,NO_EXPLICIT_EVIDENCE
+po/ga.po,,"Copyright (C) 2000-2015 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/gd.po,,Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012,NOTICE_NO_SPDX
+po/gl.po,,Copyright (C) 2000-2004 Jesús Bravo Álvarez.,NOTICE_NO_SPDX
+po/gu.po,,"Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/gv.po,,Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010,NOTICE_NO_SPDX
+po/ha.po,,,NO_EXPLICIT_EVIDENCE
+po/he.po,,"Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER. | CopyrightText: 2010, 2024 Yaron Shahrabani <sh.yaron@gmail.com> | Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.",NOTICE_NO_SPDX
+po/hi.po,,Copyright (C) 2024 nautilus's COPYRIGHT HOLDER,NOTICE_NO_SPDX
+po/hr.po,,Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER,NOTICE_NO_SPDX
+po/hu.po,,"Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/hy.po,,"Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER, 2005.",NOTICE_NO_SPDX
+po/ia.po,,"Copyright (C) 2025 nautilus's COPYRIGHT HOLDER | Copyright""",NOTICE_NO_SPDX
+po/id.po,,Copyright (C) 2004 THE Nautilus'S COPYRIGHT HOLDER,NOTICE_NO_SPDX
+po/ie.po,,"Copyright (C) 2016 nautilus's COPYRIGHT HOLDER | Copyright""",NOTICE_NO_SPDX
+po/ig.po,,,NO_EXPLICIT_EVIDENCE
+po/io.po,,"Copyright (C) 2008 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/is.po,,"Copyright (C) of the contributing translators. | Copyright (C) 2009, 2015 Free Software Foundation, Inc. | CopyrightText: 2009, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2025, 2026 Sveinn í Felli <sv1@fellsnet.is>",NOTICE_NO_SPDX
+po/it.po,,"Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, | Copyright (C) 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Free Software",NOTICE_NO_SPDX
+po/ja.po,,"Copyright (C) 2000-2026 Free Software Foundation, Inc. | Copyright (C) 2000-2005, 2007, 2008 Free Software Foundation, Inc. | Copyright""",NOTICE_NO_SPDX
+po/ka.po,,Copyright (C) 2023 nautilus authors,NOTICE_NO_SPDX
+po/kab.po,,"Copyright (c) 2020 Rosetta Contributors and Canonical Ltd 2020 | Copyright""",NOTICE_NO_SPDX
+po/kk.po,,Copyright (C) 2016 The Nautilus authors.,NOTICE_NO_SPDX
+po/km.po,,,NO_EXPLICIT_EVIDENCE
+po/kn.po,,Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER,NOTICE_NO_SPDX
+po/ko.po,,"Copyright""",NOTICE_NO_SPDX
+po/ku.po,,"Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER. | Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006",NOTICE_NO_SPDX
+po/ky.po,,Copyright (C) 2012 Nautilus's COPYRIGHT HOLDER,NOTICE_NO_SPDX
+po/li.po,,"Copyright (C) 2000 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/ln.po,,Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER,NOTICE_NO_SPDX
+po/lo.po,,"Copyright (C) 2026 nautilus's COPYRIGHT HOLDER | Copyright""",NOTICE_NO_SPDX
+po/lt.po,,"Copyright (C) 2001-2011 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/lv.po,,"Copyright (C) 2006, 2009 Free Software Foundation, Inc. | CopyrightText: 2010, 2024, 2025 Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>",NOTICE_NO_SPDX
+po/mai.po,,Copyright (C) 2006 The GNOME Foundation,NOTICE_NO_SPDX
+po/meson.build,,,NO_EXPLICIT_EVIDENCE
+po/mg.po,,Copyright (C) 2007 THE nautilus'S COPYRIGHT HOLDER,NOTICE_NO_SPDX
+po/mi.po,,"Copyright © 2001, 2004 Nautilus",NOTICE_NO_SPDX
+po/mjw.po,,Copyright (C) 2019 nautilus's COPYRIGHT HOLDER,NOTICE_NO_SPDX
+po/mk.po,,"Copyright (C) 2002,2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc. | Copyright (C) 2002,2003, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/ml.po,,Copyright (C) 2003-2008 nautilus' COPYRIGHT HOLDER.,NOTICE_NO_SPDX
+po/mn.po,,Copyright (C) 2003,NOTICE_NO_SPDX
+po/mr.po,,Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER,NOTICE_NO_SPDX
+po/ms.po,,,NO_EXPLICIT_EVIDENCE
+po/my.po,,Copyright (C) 2011 Myanmar L10n Team,NOTICE_NO_SPDX
+po/nb.po,,"Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER | Copyright""",NOTICE_NO_SPDX
+po/nds.po,,Copyright (C) 2009 nautilus's COPYRIGHT HOLDER,NOTICE_NO_SPDX
+po/ne.po,,Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.,NOTICE_NO_SPDX
+po/nl.po,,,NO_EXPLICIT_EVIDENCE
+po/nn.po,,"Copyright (C) 2001, 2003, 2004, 2006, 2008 Free Software Foundation, Inc. | Copyright (C) 2005 Yahoo! Inc. | Copyright (C) 2000 Gaute Hvoslef Kvalnes.",NOTICE_NO_SPDX
+po/nso.po,,Copyright (C) 2004 Zuza Software Foundation (Translate.org.za),NOTICE_NO_SPDX
+po/oc.po,,"Copyright (C) 2000-2015 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/or.po,,"Copyright (C) 2004, 2008, 2009, 2010, Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/pa.po,,"CopyrightText: 2005,2006, 2007, 2009, 2010, 2011, 2018, 2019, 2021, 2023, 2024, 2025 A S Alam <aalam@users.sf.net>",NOTICE_NO_SPDX
+po/pl.po,,Copyright © 2000-2025 the nautilus authors.,NOTICE_NO_SPDX
+po/ps.po,,Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER,NOTICE_NO_SPDX
+po/pt.po,,Copyright © 2001-2026 Nautilus,NOTICE_NO_SPDX
+po/pt_BR.po,,Copyright (C) 2025 The Nautilus authors,NOTICE_NO_SPDX
+po/ro.po,,"Copyright (C) 2001-2007 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/ru.po,,"Copyright (C) 2000-2009, 2010 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/rw.po,,"Copyright (C) 2005 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/si.po,,Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER,NOTICE_NO_SPDX
+po/sk.po,,,NO_EXPLICIT_EVIDENCE
+po/sl.po,,Copyright (C) 2009 nautilus COPYRIGHT HOLDER,NOTICE_NO_SPDX
+po/sq.po,,"Copyright (C) 2002-2008 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/sr.po,,,NO_EXPLICIT_EVIDENCE
+po/sr@ije.po,,,NO_EXPLICIT_EVIDENCE
+po/sr@latin.po,,,NO_EXPLICIT_EVIDENCE
+po/sv.po,,"Copyright © 2000-2026 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/ta.po,,Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.,NOTICE_NO_SPDX
+po/te.po,,"Copyright (C) 2005,2011,2012 Swecha Telugu Localisation Team <localization@swecha.net>.",NOTICE_NO_SPDX
+po/tg.po,,Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER,NOTICE_NO_SPDX
+po/th.po,,"Copyright (C) 2003-2016 Free Software Foundation, Inc. | Copyright""",NOTICE_NO_SPDX
+po/tk.po,,Copyright (C) 2004 Free Software Foundation | Copyright (C) 2004 Gurban Mühemmet Tewekgeli and,NOTICE_NO_SPDX
+po/tr.po,,"Copyright (C) 2000 Free Software Foundation, Inc. | Copyright (C) 2019-2025 Nautilus's COPYRIGHT HOLDER",NOTICE_NO_SPDX
+po/ug.po,,Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010,NOTICE_NO_SPDX
+po/uk.po,,"Copyright (C) 2001-2004 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/uz.po,,Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER,NOTICE_NO_SPDX
+po/uz@cyrillic.po,,"Copyright (C) 2009 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/vi.po,,Copyright © 2016 GNOME i18n Project for Vietnamese.,NOTICE_NO_SPDX
+po/wa.po,,"Copyright (C) 2003 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/xh.po,,Copyright (C) 2005 Canonical Ltd.,NOTICE_NO_SPDX
+po/yi.po,,"Copyright (C) 2003 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/yo.po,,,NO_EXPLICIT_EVIDENCE
+po/zh_CN.po,,"Copyright (C) 2009, 2010, 2011 Free Software Foundation, Inc. | Copyright""",NOTICE_NO_SPDX
+po/zh_HK.po,,"Copyright (C) 2000-07 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+po/zh_TW.po,,"Copyright (C) 2000-07 Free Software Foundation, Inc. | Copyright""",NOTICE_NO_SPDX
+po/zu.po,,Copyright (C) 2004 Zuza Software Foundation (Translate.org.za),NOTICE_NO_SPDX
+src/meson.build,,,NO_EXPLICIT_EVIDENCE
+src/nautilus-app-chooser-widget.c,GPL-3.0-or-later,"Copyright (C) 2004 Novell, Inc. | Copyright (C) 2007, 2010 Red Hat, Inc. | Copyright (C) 2026 GNOME Files Contributors.",SPDX_AND_NOTICE
+src/nautilus-app-chooser-widget.h,GPL-3.0-or-later,"Copyright (C) 2004 Novell, Inc. | Copyright (C) 2007, 2010 Red Hat, Inc. | Copyright (C) 2026 GNOME Files Contributors.",SPDX_AND_NOTICE
+src/nautilus-app-chooser.c,GPL-3.0-or-later,Copyright (C) 2022 António Fernandes <antoniof@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-app-chooser.h,GPL-3.0-or-later,Copyright (C) 2022 António Fernandes <antoniof@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-application.c,,"Copyright (C) 1999, 2000 Red Hat, Inc. | Copyright (C) 2000, 2001 Eazel, Inc. | Copyright (C) 2010, Cosimo Cecchi <cosimoc@gnome.org>",NOTICE_NO_SPDX
+src/nautilus-application.h,,"Copyright (C) 2000 Red Hat, Inc. | Copyright (C) 2010 Cosimo Cecchi <cosimoc@gnome.org>",NOTICE_NO_SPDX
+src/nautilus-autorun-software.c,,"Copyright (C) 2008 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-batch-rename-dialog.c,,Copyright (C) 2016 Alexandru Pandelea <alexandru.pandelea@gmail.com> | Copyright (C) 2024–2025 Markus Göllnitz <camelcasenick@bewares.it>,NOTICE_NO_SPDX
+src/nautilus-batch-rename-dialog.h,,Copyright (C) 2016 Alexandru Pandelea <alexandru.pandelea@gmail.com>,NOTICE_NO_SPDX
+src/nautilus-batch-rename-item.c,,Copyright (C) 2024–2025 Markus Göllnitz <camelcasenick@bewares.it>,NOTICE_NO_SPDX
+src/nautilus-batch-rename-item.h,,Copyright (C) 2024–2025 Markus Göllnitz <camelcasenick@bewares.it>,NOTICE_NO_SPDX
+src/nautilus-batch-rename-utilities.c,,Copyright (C) 2016 Alexandru Pandelea <alexandru.pandelea@gmail.com>,NOTICE_NO_SPDX
+src/nautilus-batch-rename-utilities.h,,Copyright (C) 2016 Alexandru Pandelea <alexandru.pandelea@gmail.com>,NOTICE_NO_SPDX
+src/nautilus-bookmark-list.c,,"Copyright (C) 1999, 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-bookmark-list.h,,"Copyright (C) 1999, 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-bookmark.c,,"Copyright (C) 1999, 2000 Eazel, Inc. | Copyright (C) 2011, Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-bookmark.h,,"Copyright (C) 1999, 2000 Eazel, Inc. | Copyright (C) 2011, Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-clipboard.c,,"Copyright (C) 1999, 2000  Free Software Foundaton | Copyright (C) 2000, 2001  Eazel, Inc. | Copyright (C) 2016 Carlos Soriano <csoriano@gnome.org>",NOTICE_NO_SPDX
+src/nautilus-clipboard.h,,"Copyright (C) 1999, 2000  Free Software Foundaton | Copyright (C) 2000  Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-column-chooser.c,,"Copyright (C) 2004 Novell, Inc.",NOTICE_NO_SPDX
+src/nautilus-column-chooser.h,,"Copyright (C) 2004 Novell, Inc.",NOTICE_NO_SPDX
+src/nautilus-column-utilities.c,,"Copyright (C) 2004 Novell, Inc.",NOTICE_NO_SPDX
+src/nautilus-column-utilities.h,,"Copyright (C) 2004 Novell, Inc.",NOTICE_NO_SPDX
+src/nautilus-compress-dialog.c,GPL-3.0-or-later,Copyright (C) 2023 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-compress-dialog.h,GPL-3.0-or-later,Copyright (C) 2023 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-date-entry-row.c,GPL-3.0-or-later,Copyright (C) 2025 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-date-entry-row.h,GPL-3.0-or-later,Copyright (C) 2025 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-date-range-dialog.c,GPL-3.0-or-later,Copyright (C) 2025 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-date-range-dialog.h,GPL-3.0-or-later,Copyright (C) 2025 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-date-utilities.c,GPL-2.0-or-later,Copyright (C) 2023 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-date-utilities.h,GPL-2.0-or-later,Copyright (C) 2023 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-dbus-launcher.c,GPL-3.0-or-later,Copyright (C) 2022 Corey Berla <corey@berla.me>,SPDX_AND_NOTICE
+src/nautilus-dbus-launcher.h,GPL-3.0-or-later,Copyright (C) 2022 Corey Berla <corey@berla.me>,SPDX_AND_NOTICE
+src/nautilus-dbus-manager.c,,"Copyright (C) 2010, Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-dbus-manager.h,,"Copyright (C) 2010, Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-dialog-utilities.c,GPL-2.0-or-later,Copyright (C) 2023 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-dialog-utilities.h,GPL-2.0-or-later,Copyright (C) 2023 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-directory-async.c,,"Copyright (C) 1999, 2000, 2001 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-directory-notify.h,,"Copyright (C) 2000, 2001 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-directory-private.h,,"Copyright (C) 1999, 2000, 2001 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-directory.c,,"Copyright (C) 1999, 2000, 2001 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-directory.h,,"Copyright (C) 1999, 2000, 2001 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-dnd.c,GPL-3.0-or-later,"Copyright (C) 2000, 2001 Eazel, Inc. | Copyright (C) 2022 The GNOME project contributors",SPDX_AND_NOTICE
+src/nautilus-dnd.h,GPL-3.0-or-later,"Copyright (C) 2000 Eazel, Inc. | Copyright (C) 2022 The GNOME project contributors",SPDX_AND_NOTICE
+src/nautilus-enum-types.c.template,,,NO_EXPLICIT_EVIDENCE
+src/nautilus-enum-types.h.template,,,NO_EXPLICIT_EVIDENCE
+src/nautilus-enums.h,,Copyright (C) 2018 Ernestas Kulik <ernestask@gnome.org>,NOTICE_NO_SPDX
+src/nautilus-error-reporting.c,,"Copyright (C) 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-error-reporting.h,,"Copyright (C) 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-fd-holder.c,GPL-3.0-or-later,Copyright (C) 2023 António Fernandes <antoniof@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-fd-holder.h,GPL-3.0-or-later,Copyright (C) 2023 António Fernandes <antoniof@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-file-changes-queue.c,,"Copyright (C) 1999, 2000, 2001 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-file-changes-queue.h,,"Copyright (C) 1999, 2000, 2001 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-file-chooser.c,GPL-3.0-or-later,Copyright (C) 2024 GNOME Foundation Inc.,SPDX_AND_NOTICE
+src/nautilus-file-chooser.h,GPL-3.0-or-later,Copyright (C) 2024 GNOME Foundation Inc.,SPDX_AND_NOTICE
+src/nautilus-file-conflict-dialog.c,,Copyright (C) 2008-2010 Cosimo Cecchi,NOTICE_NO_SPDX
+src/nautilus-file-conflict-dialog.h,,"Copyright (C) 2008, Cosimo Cecchi",NOTICE_NO_SPDX
+src/nautilus-file-operations-dbus-data.c,,Copyright (C) 2020 Alberts Muktupāvels,NOTICE_NO_SPDX
+src/nautilus-file-operations-dbus-data.h,,Copyright (C) 2020 Alberts Muktupāvels,NOTICE_NO_SPDX
+src/nautilus-file-operations.c,,"Copyright (C) 1999, 2000 Free Software Foundation | Copyright (C) 2000, 2001 Eazel, Inc. | Copyright (C) 2007 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-file-operations.h,,"Copyright (C) 1999, 2000 Free Software Foundation | Copyright (C) 2000, 2001 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-file-private.h,,"Copyright (C) 1999, 2000, 2001 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-file-undo-manager.c,,"Copyright (C) 2007-2011 Amos Brocco | Copyright (C) 2010, 2012 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-file-undo-manager.h,,Copyright (C) 2007-2011 Amos Brocco,NOTICE_NO_SPDX
+src/nautilus-file-undo-operations.c,,"Copyright (C) 2007-2011 Amos Brocco | Copyright (C) 2010, 2012 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-file-undo-operations.h,,"Copyright (C) 2007-2011 Amos Brocco | Copyright (C) 2010 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-file-utilities.c,,"Copyright (C) 1999, 2000, 2001 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-file-utilities.h,,"Copyright (C) 1999, 2000, 2001 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-file.c,,"Copyright (C) 1999, 2000, 2001 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-file.h,,"Copyright (C) 1999, 2000, 2001 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-filename-utilities.c,GPL-2.0-or-later,Copyright (C) 2023 The GNOME project contributors | (c)) | (c))),SPDX_AND_NOTICE
+src/nautilus-filename-utilities.h,GPL-2.0-or-later,Copyright (C) 2023 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-filename-validator.c,GPL-2.0-or-later,Copyright (C) 2016 the Nautilus developers,SPDX_AND_NOTICE
+src/nautilus-filename-validator.h,GPL-2.0-or-later,Copyright (C) 2016 the Nautilus developers,SPDX_AND_NOTICE
+src/nautilus-files-view-dnd.c,,"Copyright (C) 1999, 2000  Free Software Foundaton | Copyright (C) 2000, 2001  Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-files-view-dnd.h,,"Copyright (C) 1999, 2000  Free Software Foundaton | Copyright (C) 2000, 2001  Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-files-view.c,,"Copyright (C) 1999, 2000  Free Software Foundation | Copyright (C) 2000, 2001  Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-files-view.h,,"Copyright (C) 1999, 2000  Free Software Foundaton | Copyright (C) 2000, 2001  Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-floating-bar.c,,Copyright (C) 2011 Red Hat Inc.,NOTICE_NO_SPDX
+src/nautilus-floating-bar.h,,Copyright (C) 2011 Red Hat Inc.,NOTICE_NO_SPDX
+src/nautilus-freedesktop-dbus.c,,,NO_EXPLICIT_EVIDENCE
+src/nautilus-freedesktop-dbus.h,,,NO_EXPLICIT_EVIDENCE
+src/nautilus-global-preferences.c,,"Copyright (C) 1999, 2000, 2001 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-global-preferences.h,,"Copyright (C) 1999, 2000, 2001 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-grid-cell.c,GPL-3.0-or-later,Copyright (C) 2022 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-grid-cell.h,GPL-3.0-or-later,Copyright (C) 2022 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-grid-view-captions-dialog.c,GPL-3.0-or-later,Copyright © 2026 Khalid Abu Shawarib <kas@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-grid-view-captions-dialog.h,GPL-3.0-or-later,Copyright © 2026 Khalid Abu Shawarib <kas@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-grid-view.c,GPL-3.0-or-later,Copyright (C) 2022 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-grid-view.h,GPL-3.0-or-later,Copyright (C) 2022 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-hash-queue.c,,Copyright (C) 2001 Maciej Stachowiak,NOTICE_NO_SPDX
+src/nautilus-hash-queue.h,,Copyright (C) 2001 Maciej Stachowiak,NOTICE_NO_SPDX
+src/nautilus-history-controls.c,GPL-2.0-or-later,Copyright (C) 2022 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-history-controls.h,GPL-2.0-or-later,Copyright (C) 2022 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-icon-info.c,,"Copyright (C) 2007  Red Hat, Inc.,  Alexander Larsson <alexl@redhat.com>",NOTICE_NO_SPDX
+src/nautilus-icon-info.h,,,NO_EXPLICIT_EVIDENCE
+src/nautilus-icon-names.h,,,NO_EXPLICIT_EVIDENCE
+src/nautilus-image.c,GPL-3.0-or-later,Copyright © 2025 The Files contributors,SPDX_AND_NOTICE
+src/nautilus-image.h,GPL-3.0-or-later,Copyright © 2025 The Files contributors,SPDX_AND_NOTICE
+src/nautilus-internal-place-file.c,GPL-3.0-or-later,Copyright (C) 2024 GNOME Foundation Inc.,SPDX_AND_NOTICE
+src/nautilus-internal-place-file.h,GPL-3.0-or-later,Copyright (C) 2024 GNOME Foundation Inc.,SPDX_AND_NOTICE
+src/nautilus-keyfile-metadata.c,,"Copyright (C) 2011 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-keyfile-metadata.h,,"Copyright (C) 2011 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-label-cell.c,GPL-3.0-or-later,Copyright (C) 2022 António Fernandes <antoniof@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-label-cell.h,GPL-3.0-or-later,Copyright (C) 2022 António Fernandes <antoniof@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-list-base-private.h,GPL-3.0-or-later,Copyright (C) 2022 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-list-base.c,GPL-3.0-or-later,Copyright (C) 2022 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-list-base.h,GPL-3.0-or-later,Copyright (C) 2022 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-list-view.c,GPL-3.0-or-later,"Copyright (C) 2000 Eazel, Inc. | Copyright (C) 2001, 2002 Anders Carlsson <andersca@gnu.org> | Copyright (C) 2022 GNOME project contributors",SPDX_AND_NOTICE
+src/nautilus-list-view.h,GPL-3.0-or-later,"Copyright (C) 2000 Eazel, Inc. | Copyright (C) 2001, 2002 Anders Carlsson <andersca@gnu.org> | Copyright (C) 2022 GNOME project contributors",SPDX_AND_NOTICE
+src/nautilus-localsearch-utilities.c,GPL-3.0-or-later,Copyright 2019 Carlos Soriano <csoriano@redhat.com> | Copyright 2020 Sam Thursfield <sam@afuera.me.uk>,SPDX_AND_NOTICE
+src/nautilus-localsearch-utilities.h,GPL-3.0-or-later,Copyright 2019 Carlos Soriano <csoriano@redhat.com>,SPDX_AND_NOTICE
+src/nautilus-location-banner.c,,"Copyright (C) 2012 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-location-banner.h,,"Copyright (C) 2012 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-location-entry.c,,"Copyright (C) 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-location-entry.h,,"Copyright (C) 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-main.c,,"Copyright (C) 1999, 2000 Red Hat, Inc. | Copyright (C) 1999, 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-metadata.c,,"Copyright (C) 2009 Red Hatl, Inc.",NOTICE_NO_SPDX
+src/nautilus-metadata.h,,"Copyright (C) 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-mime-actions.c,,"Copyright (C) 2000, 2001 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-mime-actions.h,,"Copyright (C) 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-minimal-cell.c,GPL-3.0-or-later,Copyright © 2024 The Files contributors,SPDX_AND_NOTICE
+src/nautilus-minimal-cell.h,GPL-3.0-or-later,Copyright © 2024 The Files contributors,SPDX_AND_NOTICE
+src/nautilus-module.c,,"Copyright (C) 2003 Novell, Inc.",NOTICE_NO_SPDX
+src/nautilus-module.h,,"Copyright (C) 2003 Novell, Inc.",NOTICE_NO_SPDX
+src/nautilus-monitor.c,,"Copyright (C) 2000, 2001 Eazel, Inc. | Copyright (C) 2016 Red Hat",NOTICE_NO_SPDX
+src/nautilus-monitor.h,,"Copyright (C) 2000, 2001 Eazel, Inc. | Copyright (C) 2016 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-name-cell.c,GPL-3.0-or-later,Copyright (C) 2022 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-name-cell.h,GPL-3.0-or-later,Copyright (C) 2022 António Fernandes <antoniof@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-network-address-bar.c,GPL-3.0-or-later,Copyright (C) 2015 Georges Basile Stavracas Neto <georges.stavracas@gmail.com> | Copyright (C) 2022 António Fernandes <antoniof@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-network-address-bar.h,GPL-3.0-or-later,Copyright (C) 2022 António Fernandes <antoniof@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-network-cell.c,GPL-3.0-or-later,Copyright (C) 2024 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-network-cell.h,GPL-3.0-or-later,Copyright (C) 2024 António Fernandes <antoniof@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-network-directory.c,GPL-3.0-or-later,Copyright (C) 2024 António Fernandes <antoniof@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-network-directory.h,GPL-3.0-or-later,Copyright (C) 2024 António Fernandes <antoniof@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-network-view.c,GPL-3.0-or-later,Copyright (C) 2024 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-network-view.h,GPL-3.0-or-later,Copyright (C) 2024 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-new-folder-dialog.c,GPL-3.0-or-later,Copyright (C) 2023 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-new-folder-dialog.h,GPL-3.0-or-later,Copyright (C) 2023 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-operations-ui-manager.c,,,NO_EXPLICIT_EVIDENCE
+src/nautilus-operations-ui-manager.h,,,NO_EXPLICIT_EVIDENCE
+src/nautilus-pathbar.c,,"Copyright (C) 2004  Red Hat, Inc.,  Jonathan Blandford <jrb@gnome.org>",NOTICE_NO_SPDX
+src/nautilus-pathbar.h,,,NO_EXPLICIT_EVIDENCE
+src/nautilus-portal.c,GPL-3.0-or-later,Copyright (C) 2024 GNOME Foundation Inc.,SPDX_AND_NOTICE
+src/nautilus-portal.h,GPL-3.0-or-later,Copyright (C) 2024 GNOME Foundation Inc.,SPDX_AND_NOTICE
+src/nautilus-preferences-dialog.c,,Copyright (C) 2002 Jan Arne Petersen | Copyright (C) 2016 Carlos Soriano <csoriano@gnome.com>,NOTICE_NO_SPDX
+src/nautilus-preferences-dialog.h,,Copyright (C) 2002 Jan Arne Petersen | Copyright (C) 2016 Carlos Soriano <csoriano@gnome.org>,NOTICE_NO_SPDX
+src/nautilus-previewer.c,,"Copyright (C) 2011, Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-previewer.h,,"Copyright (C) 2011, Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-program-choosing.c,,"Copyright (C) 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-program-choosing.h,,"Copyright (C) 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-progress-indicator.c,GPL-2.0-or-later,Copyright (C) 2022 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-progress-indicator.h,GPL-2.0-or-later,Copyright (C) 2022 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-progress-info-manager.c,,"Copyright (C) 2011 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-progress-info-manager.h,,"Copyright (C) 2011 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-progress-info-widget.c,,"Copyright (C) 2007, 2011 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-progress-info-widget.h,,"Copyright (C) 2007, 2011 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-progress-info.c,,"Copyright (C) 2007 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-progress-info.h,,"Copyright (C) 2007 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-progress-paintable.c,GPL-3.0-or-later,Copyright © 2022 Purism SPC,SPDX_AND_NOTICE
+src/nautilus-progress-paintable.h,,Copyright © 2022 Purism SPC,NOTICE_NO_SPDX
+src/nautilus-progress-persistence-handler.c,,"Copyright (C) 2007, 2011, 2015 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-progress-persistence-handler.h,,"Copyright (C) 2007, 2011 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-properties.c,,"Copyright (C) 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-properties.h,,"Copyright (C) 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-query-editor.c,,"Copyright (C) 2005 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-query-editor.h,,"Copyright (C) 2005 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-query.c,,"Copyright (C) 2005 Novell, Inc.",NOTICE_NO_SPDX
+src/nautilus-query.h,,"Copyright (C) 2005 Novell, Inc.",NOTICE_NO_SPDX
+src/nautilus-recent-servers.c,LGPL-2.1-or-later,Copyright (C) 2015 Georges Basile Stavracas Neto <georges.stavracas@gmail.com>,SPDX_AND_NOTICE
+src/nautilus-recent-servers.h,GPL-3.0-or-later,Copyright (C) 2024 António Fernandes <antoniof@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-rename-file-popover.c,GPL-3.0-or-later,Copyright (C) 2023 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-rename-file-popover.h,GPL-3.0-or-later,Copyright (C) 2023 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-scheme.c,GPL-3.0-or-later,Copyright (C) 2024 Peter Eisenmann <p3732@getgoogleoff.me>,SPDX_AND_NOTICE
+src/nautilus-scheme.h,GPL-3.0-or-later,Copyright (C) 2023 Peter Eisenmann <p3732@getgoogleoff.me>,SPDX_AND_NOTICE
+src/nautilus-search-directory-file.c,,"Copyright (C) 2005 Novell, Inc.",NOTICE_NO_SPDX
+src/nautilus-search-directory-file.h,,"Copyright (C) 2003 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-search-directory.c,,"Copyright (C) 2005 Novell, Inc",NOTICE_NO_SPDX
+src/nautilus-search-directory.h,,"Copyright (C) 2005 Novell, Inc",NOTICE_NO_SPDX
+src/nautilus-search-engine-localsearch.c,,Copyright (C) 2005 Mr Jamie McCracken,NOTICE_NO_SPDX
+src/nautilus-search-engine-localsearch.h,,Copyright (C) 2005 Mr Jamie McCracken,NOTICE_NO_SPDX
+src/nautilus-search-engine-model.c,,"Copyright (C) 2005 Red Hat, Inc",NOTICE_NO_SPDX
+src/nautilus-search-engine-model.h,,"Copyright (C) 2005 Red Hat, Inc",NOTICE_NO_SPDX
+src/nautilus-search-engine-recent.c,,Copyright (C) 2018 Canonical Ltd,NOTICE_NO_SPDX
+src/nautilus-search-engine-recent.h,,Copyright (C) 2018 Canonical Ltd,NOTICE_NO_SPDX
+src/nautilus-search-engine-simple.c,,"Copyright (C) 2005 Red Hat, Inc",NOTICE_NO_SPDX
+src/nautilus-search-engine-simple.h,,"Copyright (C) 2005 Red Hat, Inc",NOTICE_NO_SPDX
+src/nautilus-search-engine.c,GPL-2.0-or-later,"Copyright (C) 2005 Novell, Inc. | Copyright © 2025 The Files contributors",SPDX_AND_NOTICE
+src/nautilus-search-engine.h,GPL-2.0-or-later,"Copyright (C) 2005 Novell, Inc. | Copyright © 2025 The Files contributors",SPDX_AND_NOTICE
+src/nautilus-search-hit.c,,"Copyright (C) 2012 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-search-hit.h,,"Copyright (C) 2012 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-search-popover.c,,Copyright (C) 2015 Georges Basile Stavracas Neto <georges.stavracas@gmail.com>,NOTICE_NO_SPDX
+src/nautilus-search-popover.h,,Copyright (C) 2015 Georges Basile Stavracas Neto <georges.stavracas@gmail.com>,NOTICE_NO_SPDX
+src/nautilus-search-provider.c,GPL-2.0-or-later,"Copyright (C) 2012 Red Hat, Inc. | Copyright © 2025 The Files contributors",SPDX_AND_NOTICE
+src/nautilus-search-provider.h,GPL-2.0-or-later,"Copyright (C) 2012 Red Hat, Inc. | Copyright © 2025 The Files contributors",SPDX_AND_NOTICE
+src/nautilus-shell-search-provider.c,,"Copyright (C) 2012 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-shell-search-provider.h,,"Copyright (C) 2012 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-shortcut-manager.c,GPL-3.0-or-later,Copyright (C) 2024 GNOME Foundation Inc.,SPDX_AND_NOTICE
+src/nautilus-shortcut-manager.h,GPL-3.0-or-later,Copyright (C) 2024 GNOME Foundation Inc.,SPDX_AND_NOTICE
+src/nautilus-sidebar-row.c,GPL-2.1-or-later,Copyright (C) 2015 Carlos Soriano <csoriano@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-sidebar-row.h,GPL-2.1-or-later,Copyright (C) 2015 Carlos Soriano <csoriano@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-sidebar.c,GPL-2.0-or-later,,SPDX_NO_NOTICE
+src/nautilus-sidebar.h,GPL-2.1-or-later,Copyright (C) 2015 Red Hat,SPDX_AND_NOTICE
+src/nautilus-signaller.c,,"Copyright (C) 1999, 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-signaller.h,,"Copyright (C) 1999, 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-star-cell.c,GPL-3.0-or-later,Copyright (C) 2022 António Fernandes <antoniof@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-star-cell.h,GPL-3.0-or-later,Copyright (C) 2022 António Fernandes <antoniof@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-starred-directory.c,,Copyright (C) 2017 Alexandru Pandelea <alexandru.pandelea@gmail.com>,NOTICE_NO_SPDX
+src/nautilus-starred-directory.h,,Copyright (C) 2017 Alexandru Pandelea <alexandru.pandelea@gmail.com>,NOTICE_NO_SPDX
+src/nautilus-tag-manager.c,,Copyright (C) 2017 Alexandru Pandelea <alexandru.pandelea@gmail.com> | Copyright (C) 2020 Sam Thursfield <sam@afuera.me.uk>,NOTICE_NO_SPDX
+src/nautilus-tag-manager.h,,Copyright (C) 2017 Alexandru Pandelea <alexandru.pandelea@gmail.com>,NOTICE_NO_SPDX
+src/nautilus-thumbnails.c,,"Copyright (C) 2000, 2001 Eazel, Inc. | Copyright (C) 2002, 2003 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-thumbnails.h,,"Copyright (C) 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-toolbar-menu-sections.h,,Copyright (C) 2016 Neil Herald <neil.herald@gmail.com>,NOTICE_NO_SPDX
+src/nautilus-toolbar.c,,"Copyright (C) 2011, Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-toolbar.h,,"Copyright (C) 2011, Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-trash-monitor.c,,"Copyright (C) 2000, 2001 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-trash-monitor.h,,"Copyright (C) 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-types.h,,Copyright (C) 2018 Ernestas Kulik <ernestask@gnome.org>,NOTICE_NO_SPDX
+src/nautilus-ui-utilities.c,,"Copyright (C) 2000 Eazel, Inc. | Copyright (C) 2004 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-ui-utilities.h,,"Copyright (C) 2004 Red Hat, Inc.",NOTICE_NO_SPDX
+src/nautilus-undo-private.h,,"Copyright (C) 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-vfs-directory.c,,"Copyright (C) 1999, 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-vfs-directory.h,,"Copyright (C) 1999, 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-vfs-file.c,,"Copyright (C) 1999, 2000, 2001 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-vfs-file.h,,"Copyright (C) 1999, 2000 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-view-cell.c,GPL-3.0-or-later,Copyright (C) 2022 2022 António Fernandes <antoniof@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-view-cell.h,GPL-3.0-or-later,Copyright (C) 2022 António Fernandes <antoniof@gnome.org>,SPDX_AND_NOTICE
+src/nautilus-view-controls.c,GPL-2.0-or-later,Copyright (C) 2022 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-view-controls.h,GPL-2.0-or-later,Copyright (C) 2022 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-view-info.h,GPL-3.0-or-later,Copyright (C) 2024 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-view-item-filter.c,GPL-3.0-or-later,Copyright (C) 2024 GNOME Foundation Inc.,SPDX_AND_NOTICE
+src/nautilus-view-item-filter.h,GPL-3.0-or-later,Copyright (C) 2024 GNOME Foundation Inc.,SPDX_AND_NOTICE
+src/nautilus-view-item.c,GPL-3.0-or-later,Copyright (C) 2022 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-view-item.h,GPL-3.0-or-later,Copyright (C) 2022 The GNOME project contributors,SPDX_AND_NOTICE
+src/nautilus-view-model.c,,,NO_EXPLICIT_EVIDENCE
+src/nautilus-view-model.h,,,NO_EXPLICIT_EVIDENCE
+src/nautilus-window-slot.c,,"Copyright (C) 2008 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+src/nautilus-window-slot.h,,"Copyright (C) 2008 Free Software Foundation, Inc.",NOTICE_NO_SPDX
+src/nautilus-window.c,,"Copyright (C) 1999, 2000, 2004 Red Hat, Inc. | Copyright (C) 1999, 2000, 2001 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-window.h,,"Copyright (C) 1999, 2000 Red Hat, Inc. | Copyright (C) 1999, 2000, 2001 Eazel, Inc.",NOTICE_NO_SPDX
+src/nautilus-x-content-bar.c,,"Copyright (C) 2008 Red Hat, Inc. | Copyright (C) 2006 Paolo Borelli <pborelli@katamail.com>",NOTICE_NO_SPDX
+src/nautilus-x-content-bar.h,,"Copyright (C) 2008 Red Hat, Inc. | Copyright (C) 2006 Paolo Borelli <pborelli@katamail.com>",NOTICE_NO_SPDX
+src/rebuntu-capacity-bar.c,,,NO_EXPLICIT_EVIDENCE
+src/rebuntu-capacity-bar.h,,,NO_EXPLICIT_EVIDENCE
+src/rebuntu-computer-view.c,GPL-3.0-or-later,Copyright (C) 2024 The GNOME project contributors,SPDX_AND_NOTICE
+src/rebuntu-computer-view.h,GPL-3.0-or-later,Copyright (C) 2024 The GNOME project contributors,SPDX_AND_NOTICE
+src/rebuntu-device-cell.c,GPL-3.0-or-later,,SPDX_NO_NOTICE
+src/rebuntu-device-cell.h,,,NO_EXPLICIT_EVIDENCE
+src/rebuntu-device-model.c,GPL-3.0-or-later,,SPDX_NO_NOTICE
+src/rebuntu-device-model.h,,,NO_EXPLICIT_EVIDENCE
+src/rebuntu-volume-resolver.c,,,NO_EXPLICIT_EVIDENCE
+src/rebuntu-volume-resolver.h,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/arrow-next-symbolic-rtl.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/arrow-next-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/cancel-operation-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/cut-large-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/cut-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/emblem-readonly-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/emblem-symbolic-link-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/emblem-unwriteable-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/external-link-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/file-operation-cancelled-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/file-operation-finished-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/funnel-outline-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/image-print-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/info-outline-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/nautilus-file-chooser-options-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/nautilus-folder-search-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/nautilus-search-filters-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/network-computer-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/paper-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/quotation-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/remove-custom-icon-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/icons/scalable/actions/rich-text-symbolic.svg,,,NO_EXPLICIT_EVIDENCE
+src/resources/image/checkerboard.png,,,NO_EXPLICIT_EVIDENCE
+src/resources/image/filmholes.png,,,NO_EXPLICIT_EVIDENCE
+src/resources/image/text-x-preview.png,,,NO_EXPLICIT_EVIDENCE
+src/resources/menu/nautilus-files-view-context-menus.ui,,,NO_EXPLICIT_EVIDENCE
+src/resources/menu/nautilus-pathbar-context-menu.ui,,,NO_EXPLICIT_EVIDENCE
+src/resources/menu/nautilus-toolbar-view-menu.ui,,,NO_EXPLICIT_EVIDENCE
+src/resources/meson.build,,,NO_EXPLICIT_EVIDENCE
+src/resources/nautilus.gresource.xml.in,,,NO_EXPLICIT_EVIDENCE
+src/resources/style.css,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-app-chooser-widget.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-app-chooser.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-batch-rename-dialog.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-column-chooser.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-compress-dialog.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-date-entry-row.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-date-range-dialog.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-file-chooser.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-file-conflict-dialog.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-file-properties-change-permissions.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-files-view-select-items.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-files-view.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-grid-cell.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-grid-view-captions-dialog.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-history-controls.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-name-cell.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-network-address-bar.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-network-cell.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-new-folder-dialog.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-operations-ui-manager-request-passphrase.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-preferences-dialog.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-progress-indicator.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-progress-info-widget.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-properties-widget.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-properties-window.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-rename-file-popover.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-search-popover.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-search-types-dialog.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-sidebar-row.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-toolbar.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-view-controls.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/nautilus-window.blp,,,NO_EXPLICIT_EVIDENCE
+src/resources/ui/shortcuts-dialog.blp,,,NO_EXPLICIT_EVIDENCE
+test/automated/display/meson.build,,,NO_EXPLICIT_EVIDENCE
+test/automated/display/test-file-operations-create.c,GPL-3.0-or-later,Copyright © 2025 Khalid Abu Shawarib,SPDX_AND_NOTICE
+test/automated/display/test-files-view.c,GPL-3.0-or-later,Copyright © 2025 Khalid Abu Shawarib <kas@gnome.org>,SPDX_AND_NOTICE
+test/automated/display/test-nautilus-directory-async.c,,,NO_EXPLICIT_EVIDENCE
+test/automated/display/test-portal-file-chooser.c,GPL-3.0-or-later,Copyright (C) 2026 Khalid Abu Shawarib.,SPDX_AND_NOTICE
+test/automated/display/test-sidebar.c,,,NO_EXPLICIT_EVIDENCE
+test/automated/displayless/meson.build,,,NO_EXPLICIT_EVIDENCE
+test/automated/displayless/test-bookmarks.c,,,NO_EXPLICIT_EVIDENCE
+test/automated/displayless/test-directory.c,,,NO_EXPLICIT_EVIDENCE
+test/automated/displayless/test-file-metadata.c,,,NO_EXPLICIT_EVIDENCE
+test/automated/displayless/test-file-operations-archive.c,GPL-3.0-or-later,Copyright © 2025 The Files contributors,SPDX_AND_NOTICE
+test/automated/displayless/test-file-operations-copy-files.c,,,NO_EXPLICIT_EVIDENCE
+test/automated/displayless/test-file-operations-link.c,GPL-3.0-or-later,Copyright © 2025 Khalid Abu Shawarib,SPDX_AND_NOTICE
+test/automated/displayless/test-file-operations-move-files.c,,,NO_EXPLICIT_EVIDENCE
+test/automated/displayless/test-file-operations-rename.c,GPL-3.0-or-later,Copyright © 2026 Khalid Abu Shawarib,SPDX_AND_NOTICE
+test/automated/displayless/test-file-operations-trash-or-delete.c,,,NO_EXPLICIT_EVIDENCE
+test/automated/displayless/test-file-utilities.c,,,NO_EXPLICIT_EVIDENCE
+test/automated/displayless/test-file.c,,,NO_EXPLICIT_EVIDENCE
+test/automated/displayless/test-filename-common-prefix.c,,,NO_EXPLICIT_EVIDENCE
+test/automated/displayless/test-filename-utilities.c,,,NO_EXPLICIT_EVIDENCE
+test/automated/displayless/test-nautilus-search-engine-localsearch.c,,,NO_EXPLICIT_EVIDENCE
+test/automated/displayless/test-nautilus-search-engine-model.c,,,NO_EXPLICIT_EVIDENCE
+test/automated/displayless/test-nautilus-search-engine-simple.c,,,NO_EXPLICIT_EVIDENCE
+test/automated/displayless/test-nautilus-search-engine.c,,,NO_EXPLICIT_EVIDENCE
+test/automated/displayless/test-thumbnails.c,GPL-3.0-or-later,Copyright © 2025 Khalid Abu Shawarib,SPDX_AND_NOTICE
+test/automated/displayless/test-ui-utilities.c,,,NO_EXPLICIT_EVIDENCE
+test/automated/meson.build,,,NO_EXPLICIT_EVIDENCE
+test/automated/test-utilities.c,GPL-3.0-or-later,Copyright © 2025 Khalid Abu Shawarib,SPDX_AND_NOTICE
+test/automated/test-utilities.h,,,NO_EXPLICIT_EVIDENCE
+test/file-torture.py,,Copyright (C) 2006 Federico Mena-Quintero,NOTICE_NO_SPDX
+test/meson.build,,,NO_EXPLICIT_EVIDENCE
+xdp-gnome/COPYING,,"Copyright (C) 1991, 1999 Free Software Foundation, Inc. | copyright the | copyright holder or | copyright law: that is to say, a work containing the Library or a | copyright notice and disclaimer of warranty; keep intact | copyright notices, you must include the | copyright notice for the Library among them, as well as a reference | copyrighted interfaces, the",NOTICE_NO_SPDX
+xdp-gnome/README.md,,,NO_EXPLICIT_EVIDENCE
+xdp-gnome/data/README.md,,,NO_EXPLICIT_EVIDENCE
+xdp-gnome/data/mutter-x11-interop.xml,,,NO_EXPLICIT_EVIDENCE
+xdp-gnome/data/org.freedesktop.impl.portal.FileChooser.xml,,"Copyright (C) 2015 Red Hat, Inc.",NOTICE_NO_SPDX
+xdp-gnome/data/org.freedesktop.impl.portal.Request.xml,,"Copyright (C) 2016 Red Hat, Inc.",NOTICE_NO_SPDX
+xdp-gnome/data/org.gnome.Mutter.ServiceChannel.xml,,,NO_EXPLICIT_EVIDENCE
+xdp-gnome/externalwindow-wayland.c,,"Copyright © 2016 Red Hat, Inc",NOTICE_NO_SPDX
+xdp-gnome/externalwindow-wayland.h,,"Copyright © 2016 Red Hat, Inc",NOTICE_NO_SPDX
+xdp-gnome/externalwindow-x11.c,,"Copyright © 2016 Red Hat, Inc",NOTICE_NO_SPDX
+xdp-gnome/externalwindow-x11.h,,"Copyright © 2016 Red Hat, Inc",NOTICE_NO_SPDX
+xdp-gnome/externalwindow.c,,"Copyright © 2016 Red Hat, Inc",NOTICE_NO_SPDX
+xdp-gnome/externalwindow.h,,"Copyright © 2016 Red Hat, Inc",NOTICE_NO_SPDX
+xdp-gnome/meson.build,,,NO_EXPLICIT_EVIDENCE
+xdp-gnome/request.c,,"Copyright © 2016 Red Hat, Inc",NOTICE_NO_SPDX
+xdp-gnome/request.h,,"Copyright © 2016 Red Hat, Inc",NOTICE_NO_SPDX
