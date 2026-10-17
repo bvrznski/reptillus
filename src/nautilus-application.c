@@ -1009,6 +1009,13 @@ nautilus_application_startup (GApplication *app)
 
     g_assert (display == NULL || gdk_display_get_default () == display);
 
+    /* REPTILLUS GLASS 12: dark preference; override with REPTILLUS_GLASS=0 */
+    if (g_strcmp0 (g_getenv ("REPTILLUS_GLASS"), "0") != 0)
+    {
+        adw_style_manager_set_color_scheme (adw_style_manager_get_default (),
+                                            ADW_COLOR_SCHEME_FORCE_DARK);
+    }
+
     gtk_window_set_default_icon_name (APPLICATION_ID);
 
     /* initialize preferences and create the global GSettings objects */

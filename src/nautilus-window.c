@@ -65,6 +65,7 @@
 #include "nautilus-sidebar.h"
 #include "nautilus-signaller.h"
 #include "nautilus-toolbar.h"
+#include "nautilus-view-controls.h"
 #include "nautilus-trash-monitor.h"
 #include "nautilus-ui-utilities.h"
 #include "nautilus-window-slot.h"
@@ -78,6 +79,9 @@ static void update_cursor (NautilusWindow *window);
 static void
 set_active_slot (NautilusWindow     *window,
                  NautilusWindowSlot *new_slot);
+
+static void reptillus_attach_pane_tracking (NautilusWindow *window, NautilusWindowSlot *slot);
+static void reptillus_select_interaction_pane (NautilusWindow *window, gboolean secondary);
 
 /* Sanity check: highest mouse button value I could find was 14. 5 is our
  * lower threshold (well-documented to be the one of the button events for the
@@ -101,6 +105,12 @@ struct _NautilusWindow
     NautilusWindowSlot *active_slot; /* weak reference */
 
     GtkWidget *split_view;
+    GtkWidget *reptillus_secondary_pane;
+    GtkBox *reptillus_secondary_real_host;
+    GtkLabel *reptillus_secondary_real_path;
+    GtkButton *reptillus_secondary_real_up_button;
+    GtkButton *reptillus_secondary_real_refresh_button;
+    NautilusWindowSlot *reptillus_secondary_real_slot; /* weak, owned by widget tree */
 
     /* Side Pane */
     NautilusSidebar *places_sidebar;
@@ -1139,10 +1149,204 @@ rebuntu_open_terminal_cb (GSimpleAction *action,
         g_warning ("Could not open terminal: %s", error->message);
 }
 
+
+/* Reptillus: compare the current local directory with a user-selected directory.
+ * Comparison runs asynchronously so large trees never block the GTK main loop. */
+static void
+reptillus_compare_finished (GObject *source, GAsyncResult *result, gpointer user_data)
+{
+    GtkWindow *window = GTK_WINDOW (user_data);
+    g_autoptr (GError) error = NULL;
+    g_autofree char *output = NULL;
+    g_autofree char *errors = NULL;
+    g_autoptr (GtkAlertDialog) alert = gtk_alert_dialog_new (NULL);
+    gboolean ok = g_subprocess_communicate_utf8_finish (G_SUBPROCESS (source), result,
+                                                         &output, &errors, &error);
+    if (!ok || !g_subprocess_get_if_exited (G_SUBPROCESS (source)) ||
+        g_subprocess_get_exit_status (G_SUBPROCESS (source)) > 1)
+    {
+        gtk_alert_dialog_set_message (alert, "Directory comparison failed");
+        gtk_alert_dialog_set_detail (alert, error ? error->message :
+                                     (errors ? errors : "Comparison tool failed"));
+    }
+    else
+    {
+        gtk_alert_dialog_set_message (alert, "Directory comparison results");
+        gtk_alert_dialog_set_detail (alert, output && *output ? output : "Directories are identical");
+    }
+    gtk_alert_dialog_show (alert, window);
+    g_object_unref (window);
+}
+
+static void
+reptillus_compare_choose_finished (GObject *source, GAsyncResult *result, gpointer user_data)
+{
+    NautilusWindow *window = NAUTILUS_WINDOW (user_data);
+    g_autoptr (GError) error = NULL;
+    g_autoptr (GFile) right = gtk_file_dialog_select_folder_finish (GTK_FILE_DIALOG (source), result, &error);
+    g_autofree char *left_path = NULL;
+    g_autofree char *right_path = NULL;
+    g_autoptr (GSubprocess) subprocess = NULL;
+    g_autoptr (GtkAlertDialog) alert = NULL;
+    GFile *left;
+    if (!right)
+        goto done; /* User cancelled. */
+    if (!window->active_slot)
+        goto done;
+    left = nautilus_window_slot_get_location (window->active_slot);
+    if (!left || !g_file_is_native (left) || !g_file_is_native (right))
+        goto unsupported;
+    left_path = g_file_get_path (left);
+    right_path = g_file_get_path (right);
+    if (!left_path || !right_path)
+        goto unsupported;
+    /* The tool is installed in libexec by the completion patch; no shell. */
+    subprocess = g_subprocess_new (G_SUBPROCESS_FLAGS_STDOUT_PIPE | G_SUBPROCESS_FLAGS_STDERR_PIPE,
+                                  &error, "reptillus-compare", left_path, right_path, NULL);
+    if (!subprocess)
+    {
+        alert = gtk_alert_dialog_new ("Unable to launch directory comparison");
+        gtk_alert_dialog_set_detail (alert, error->message);
+        gtk_alert_dialog_show (alert, GTK_WINDOW (window));
+        goto done;
+    }
+    g_subprocess_communicate_utf8_async (subprocess, NULL, NULL,
+                                         reptillus_compare_finished, g_object_ref (window));
+    goto done;
+unsupported:
+    alert = gtk_alert_dialog_new ("Comparison requires two local folders");
+    gtk_alert_dialog_show (alert, GTK_WINDOW (window));
+done:
+    g_object_unref (window);
+}
+
+static void
+reptillus_compare_folders_cb (GSimpleAction *action, GVariant *parameter, gpointer user_data)
+{
+    NautilusWindow *window = NAUTILUS_WINDOW (user_data);
+    g_autoptr (GtkFileDialog) dialog = gtk_file_dialog_new ();
+    gtk_file_dialog_set_title (dialog, "Compare current folder with…");
+    gtk_file_dialog_select_folder (dialog, GTK_WINDOW (window), NULL,
+                                   reptillus_compare_choose_finished, g_object_ref (window));
+}
+
+/* Reptillus native dual pane: both panes render NautilusWindowSlot.
+ * The secondary slot is intentionally not a tab in the primary AdwTabView.
+ * F3 only toggles its visibility; navigation and view state are preserved.
+ */
+static void
+reptillus_secondary_real_path_changed (NautilusWindowSlot *slot, GParamSpec *pspec,
+                                      NautilusWindow *window)
+{
+    GFile *location = nautilus_window_slot_get_location (slot);
+    if (location != NULL)
+    {
+        g_autofree char *path = g_file_get_parse_name (location);
+        gtk_label_set_text (window->reptillus_secondary_real_path, path);
+    }
+}
+
+static void
+reptillus_secondary_real_up (GtkButton *button, gpointer data)
+{
+    NautilusWindow *window = NAUTILUS_WINDOW (data);
+    if (window->reptillus_secondary_real_slot == NULL) return;
+    GFile *location = nautilus_window_slot_get_location (window->reptillus_secondary_real_slot);
+    if (location == NULL) return;
+    g_autoptr (GFile) parent = g_file_get_parent (location);
+    if (parent != NULL)
+        nautilus_window_slot_open_location_full (window->reptillus_secondary_real_slot, parent, NULL);
+}
+
+static void
+reptillus_secondary_real_refresh (GtkButton *button, gpointer data)
+{
+    NautilusWindow *window = NAUTILUS_WINDOW (data);
+    if (window->reptillus_secondary_real_slot != NULL)
+        nautilus_window_slot_queue_reload (window->reptillus_secondary_real_slot);
+}
+
+/* Reptillus 13B: route the existing toolbar and slot action namespace
+ * to whichever file pane was most recently interacted with. */
+static void
+reptillus_select_interaction_pane (NautilusWindow *window, gboolean secondary)
+{
+    NautilusWindowSlot *slot = secondary ? window->reptillus_secondary_real_slot
+                                        : window->active_slot;
+    if (slot == NULL) return;
+
+    g_object_set (window->toolbar, "window-slot", slot, NULL);
+    gtk_widget_insert_action_group (GTK_WIDGET (window), "slot",
+                                    nautilus_window_slot_get_action_group (slot));
+}
+
+static gboolean
+reptillus_pane_pointer_event (GtkEventControllerLegacy *controller,
+                              GdkEvent *event, gpointer user_data)
+{
+    NautilusWindow *window = NAUTILUS_WINDOW (user_data);
+    if (gdk_event_get_event_type (event) == GDK_BUTTON_PRESS)
+    {
+        gboolean secondary = gtk_event_controller_get_widget (GTK_EVENT_CONTROLLER (controller)) ==
+                             GTK_WIDGET (window->reptillus_secondary_real_slot);
+        reptillus_select_interaction_pane (window, secondary);
+    }
+    return FALSE;
+}
+
+static void
+reptillus_pane_focus_enter (GtkEventControllerFocus *controller, gpointer user_data)
+{
+    NautilusWindow *window = NAUTILUS_WINDOW (user_data);
+    gboolean secondary = gtk_event_controller_get_widget (GTK_EVENT_CONTROLLER (controller)) ==
+                         GTK_WIDGET (window->reptillus_secondary_real_slot);
+    reptillus_select_interaction_pane (window, secondary);
+}
+
+static void
+reptillus_attach_pane_tracking (NautilusWindow *window, NautilusWindowSlot *slot)
+{
+    GtkEventController *pointer = gtk_event_controller_legacy_new ();
+    gtk_event_controller_set_propagation_phase (pointer, GTK_PHASE_CAPTURE);
+    g_signal_connect (pointer, "event", G_CALLBACK (reptillus_pane_pointer_event), window);
+    gtk_widget_add_controller (GTK_WIDGET (slot), pointer);
+
+    GtkEventController *focus = gtk_event_controller_focus_new ();
+    g_signal_connect (focus, "enter", G_CALLBACK (reptillus_pane_focus_enter), window);
+    gtk_widget_add_controller (GTK_WIDGET (slot), focus);
+}
+
+static void
+reptillus_toggle_secondary (GSimpleAction *action, GVariant *parameter, gpointer data)
+{
+    NautilusWindow *window = NAUTILUS_WINDOW (data);
+    gboolean show = !gtk_widget_get_visible (window->reptillus_secondary_pane);
+    if (show && window->reptillus_secondary_real_slot == NULL)
+    {
+        NautilusWindowSlot *slot = nautilus_window_slot_new (NAUTILUS_MODE_BROWSE);
+        window->reptillus_secondary_real_slot = slot; /* owned by GtkBox template */
+        gtk_box_append (window->reptillus_secondary_real_host, GTK_WIDGET (slot));
+        reptillus_attach_pane_tracking (window, slot);
+        g_signal_connect (slot, "notify::location",
+                          G_CALLBACK (reptillus_secondary_real_path_changed), window);
+        GFile *location = window->active_slot != NULL ?
+            nautilus_window_slot_get_location (window->active_slot) : NULL;
+        g_autoptr (GFile) home = NULL;
+        if (location == NULL)
+        {
+            home = g_file_new_for_path (g_get_home_dir ());
+            location = home;
+        }
+        nautilus_window_slot_open_location_full (slot, location, NULL);
+    }
+    gtk_widget_set_visible (window->reptillus_secondary_pane, show);
+}
+
 const GActionEntry win_entries[] =
 {
     { .name = "current-location-menu", .activate = action_show_current_location_menu },
     { .name = "new-tab", .activate = action_new_tab },
+    { .name = "reptillus-compare-folders", .activate = reptillus_compare_folders_cb },
     { .name = "open-current-folder-in-terminal", .activate = rebuntu_open_terminal_cb },
     { .name = "undo", .activate = action_undo },
     { .name = "redo", .activate = action_redo },
@@ -1156,6 +1360,7 @@ const GActionEntry win_entries[] =
     { .name = "go-to-tab", .parameter_type = "i", .state = "0", .change_state = action_go_to_tab },
     { .name = "restore-tab", .activate = action_restore_tab },
     { .name = "toggle-sidebar", .activate = action_toggle_sidebar },
+    { .name = "toggle-secondary-pane", .activate = reptillus_toggle_secondary },
 };
 
 static void
@@ -1175,6 +1380,7 @@ nautilus_window_initialize_actions (NautilusWindow *window)
 
     app = g_application_get_default ();
     nautilus_application_set_accelerator (app, "win.new-tab", "<control>t");
+    nautilus_application_set_accelerator (app, "win.reptillus-compare-folders", "<control><shift>m");
     nautilus_application_set_accelerator (app, "win.open-current-folder-in-terminal", "<control><alt>t");
     nautilus_application_set_accelerator (app, "win.close-current-view", "<control>w");
 
@@ -1186,6 +1392,7 @@ nautilus_window_initialize_actions (NautilusWindow *window)
     nautilus_application_set_accelerator (app, "win.current-location-menu", "F10");
     nautilus_application_set_accelerator (app, "win.restore-tab", "<shift><control>t");
     nautilus_application_set_accelerator (app, "win.toggle-sidebar", "F9");
+    nautilus_application_set_accelerator (app, "win.toggle-secondary-pane", "F3");
 
     /* Alt+N for the first 9 tabs */
     for (i = 0; i < 9; ++i)
@@ -1421,6 +1628,12 @@ set_active_slot (NautilusWindow     *window,
 
         /* inform slot & view */
         nautilus_window_slot_set_active (new_slot, TRUE);
+        if (g_object_get_data (G_OBJECT (new_slot), "reptillus-13b-tracked") == NULL)
+        {
+            reptillus_attach_pane_tracking (window, new_slot);
+            g_object_set_data (G_OBJECT (new_slot), "reptillus-13b-tracked", GINT_TO_POINTER (1));
+        }
+        reptillus_select_interaction_pane (window, FALSE);
 
         on_location_changed (window);
         update_cursor (window);
@@ -1636,6 +1849,10 @@ nautilus_window_init (NautilusWindow *window)
     g_type_ensure (NAUTILUS_TYPE_PROGRESS_INDICATOR);
     g_type_ensure (NAUTILUS_TYPE_SHORTCUT_MANAGER);
     gtk_widget_init_template (GTK_WIDGET (window));
+    g_signal_connect (window->reptillus_secondary_real_up_button, "clicked",
+                      G_CALLBACK (reptillus_secondary_real_up), window);
+    g_signal_connect (window->reptillus_secondary_real_refresh_button, "clicked",
+                      G_CALLBACK (reptillus_secondary_real_refresh), window);
 
     g_signal_connect (window, "notify::maximized",
                       G_CALLBACK (on_is_maximized_changed), NULL);
@@ -1756,6 +1973,11 @@ nautilus_window_class_init (NautilusWindowClass *class)
     gtk_widget_class_bind_template_child (wclass, NautilusWindow, undo_redo_section);
     gtk_widget_class_bind_template_child (wclass, NautilusWindow, toolbar);
     gtk_widget_class_bind_template_child (wclass, NautilusWindow, split_view);
+    gtk_widget_class_bind_template_child (wclass, NautilusWindow, reptillus_secondary_pane);
+    gtk_widget_class_bind_template_child (wclass, NautilusWindow, reptillus_secondary_real_host);
+    gtk_widget_class_bind_template_child (wclass, NautilusWindow, reptillus_secondary_real_path);
+    gtk_widget_class_bind_template_child (wclass, NautilusWindow, reptillus_secondary_real_up_button);
+    gtk_widget_class_bind_template_child (wclass, NautilusWindow, reptillus_secondary_real_refresh_button);
     gtk_widget_class_bind_template_child (wclass, NautilusWindow, places_sidebar);
     gtk_widget_class_bind_template_child (wclass, NautilusWindow, toast_overlay);
     gtk_widget_class_bind_template_child (wclass, NautilusWindow, tab_view);

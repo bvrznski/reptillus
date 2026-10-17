@@ -93,11 +93,28 @@ template $NautilusToolbar: Adw.Bin {
     }
 
     [end]
+    Button reptillus_dual_pane_button {
+      icon-name: "view-dual-symbolic";
+      tooltip-text: _("Toggle Dual Pane (F3)");
+      action-name: "win.toggle-secondary-pane";
+      focus-on-click: false;
+    }
+
+    [end]
     Button new_folder_button {
-      visible: bind template.show-new-folder-button;
+      visible: true;
       icon-name: "folder-new-symbolic";
       tooltip-text: _("New Folder");
       action-name: "view.new-folder";
+      focus-on-click: false;
+    }
+
+    [end]
+    Button rebuntu_new_file_button {
+      visible: true;
+      icon-name: "document-new-symbolic";
+      tooltip-text: _("New Empty File");
+      action-name: "view.rebuntu-new-empty-file";
       focus-on-click: false;
     }
 

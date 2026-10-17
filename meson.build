@@ -278,3 +278,6 @@ summary(
   section: 'Build',
   bool_yn: true,
 )
+
+# Reptillus companion utilities: independent of the Nautilus extension ABI.
+install_data('tools/reptillus-compare', install_dir: bindir, install_mode: 'rwxr-xr-x')

@@ -124,6 +124,7 @@ template $NautilusWindow: Adw.ApplicationWindow {
         sidebar-width-fraction: 0.2;
 
         sidebar: Adw.ToolbarView {
+          top-bar-style: flat;
           reveal-bottom-bars: bind progress_indicator.reveal;
 
           [top]
@@ -163,6 +164,7 @@ template $NautilusWindow: Adw.ApplicationWindow {
         };
 
         content: Adw.ToolbarView {
+          top-bar-style: flat;
           [top]
           $NautilusToolbar toolbar {
             show-view-controls: true;
@@ -173,11 +175,43 @@ template $NautilusWindow: Adw.ApplicationWindow {
 
           [top]
           Adw.TabBar tab_bar {
+            visible: false;
             view: tab_view;
           }
 
-          content: Adw.TabView tab_view {
-            menu-model: tab_menu_model;
+          content: Paned reptillus_paned {
+            orientation: horizontal;
+            start-child: Adw.TabView tab_view {
+              menu-model: tab_menu_model;
+            };
+            end-child: Box reptillus_secondary_pane {
+              visible: false;
+              orientation: vertical;
+              hexpand: true;
+              width-request: 280;
+              Box {
+                orientation: horizontal;
+                spacing: 4;
+                Button reptillus_secondary_real_up_button {
+                  icon-name: "go-up-symbolic";
+                  tooltip-text: _("Parent folder");
+                }
+                Button reptillus_secondary_real_refresh_button {
+                  icon-name: "view-refresh-symbolic";
+                  tooltip-text: _("Refresh folder");
+                }
+                Label reptillus_secondary_real_path {
+                  hexpand: true;
+                  xalign: 0;
+                  ellipsize: middle;
+                  label: _("Secondary folder");
+                }
+              }
+              Box reptillus_secondary_real_host {
+                orientation: vertical;
+                vexpand: true;
+              }
+            };
           };
 
           [bottom]

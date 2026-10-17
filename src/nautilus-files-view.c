@@ -2397,6 +2397,52 @@ action_empty_trash (GSimpleAction *action,
     nautilus_file_operations_empty_trash (GTK_WIDGET (window), TRUE, NULL);
 }
 
+/* Reptillus toolbar: create a unique empty file without overwriting existing data. */
+static void
+action_rebuntu_new_empty_file (GSimpleAction *action,
+                               GVariant      *state,
+                               gpointer       user_data)
+{
+    NautilusFilesView *view = NAUTILUS_FILES_VIEW (user_data);
+    g_autofree char *uri = nautilus_files_view_get_backing_uri (view);
+    g_autoptr (GFile) directory = NULL;
+
+    if (uri == NULL)
+    {
+        return;
+    }
+
+    directory = g_file_new_for_uri (uri);
+    for (unsigned int i = 0; i < 10000; i++)
+    {
+        g_autofree char *filename = i == 0 ? g_strdup ("New File.txt") :
+                                    g_strdup_printf ("New File (%u).txt", i);
+        g_autoptr (GFile) file = g_file_get_child (directory, filename);
+        g_autoptr (GError) error = NULL;
+        g_autoptr (GFileOutputStream) stream =
+            g_file_create (file, G_FILE_CREATE_NONE, NULL, &error);
+
+        if (stream != NULL)
+        {
+            if (!g_output_stream_close (G_OUTPUT_STREAM (stream), NULL, &error))
+            {
+                g_warning ("Unable to finish creating empty file: %s", error->message);
+            }
+            return;
+        }
+
+        if (g_error_matches (error, G_IO_ERROR, G_IO_ERROR_EXISTS))
+        {
+            continue;
+        }
+
+        g_warning ("Unable to create empty file: %s", error->message);
+        return;
+    }
+
+    g_warning ("Unable to create empty file: no available filename");
+}
+
 static void
 action_new_folder (GSimpleAction *action,
                    GVariant      *state,
@@ -6821,6 +6867,7 @@ const GActionEntry view_entries[] =
     /* Background menu */
     { .name = "empty-trash", .activate = action_empty_trash },
     { .name = "new-folder", .activate = action_new_folder },
+    { .name = "rebuntu-new-empty-file", .activate = action_rebuntu_new_empty_file },
     { .name = "select-all", .activate = action_select_all },
     { .name = "paste", .activate = action_paste_files },
     { .name = "copy-current-location", .activate = action_copy_current_location },

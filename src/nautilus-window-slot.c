@@ -3269,3 +3269,11 @@ nautilus_window_slot_go_down (NautilusWindowSlot *self)
     down_list = g_list_delete_link (down_list, down_list);
     self->down_list = g_steal_pointer (&down_list);
 }
+
+/* Reptillus: owned by the slot; caller must not unref. */
+GActionGroup *
+nautilus_window_slot_get_action_group (NautilusWindowSlot *slot)
+{
+    g_return_val_if_fail (NAUTILUS_IS_WINDOW_SLOT (slot), NULL);
+    return slot->slot_action_group;
+}

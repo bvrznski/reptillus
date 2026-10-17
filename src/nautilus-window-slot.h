@@ -123,3 +123,6 @@ void nautilus_window_slot_back_or_forward                  (NautilusWindowSlot *
                                                             guint               distance);
 
 void free_navigation_state                                 (gpointer data);
+
+/* Reptillus: expose per-slot actions for independent pane controls. */
+GActionGroup *nautilus_window_slot_get_action_group (NautilusWindowSlot *slot);

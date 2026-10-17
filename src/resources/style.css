@@ -389,3 +389,211 @@ rubberband {
 .toolbar.no-bottom-padding {
   padding-bottom: 0px;
 }
+
+/* REPTILLUS GLASS 12 */
+/* Graphite glass: in-window surfaces, no compositor blur. */
+window.view, window.background {
+  background-color: #15191f;
+  color: #dae2eb;
+}
+headerbar {
+  background-color: alpha(#28303b, 0.90);
+  color: #e4ebf3;
+  box-shadow: inset 0 -1px alpha(white, 0.09);
+}
+.nautilus-pathbar {
+  background-color: alpha(#8191a5, 0.17);
+  border-radius: 11px;
+  box-shadow: inset 0 1px alpha(white, 0.05);
+}
+.nautilus-path-button { border-radius: 8px; }
+.floating-bar {
+  background-color: alpha(#384350, 0.92);
+  color: #e4ebf3;
+  border: 1px solid alpha(white, 0.10);
+  box-shadow: 0 4px 16px alpha(black, 0.20);
+}
+
+/* CAPSULE GLASS MATERIAL 01 END */
+
+/* CAPSULE GLASS 03 START */
+/* X11 compositor experiment. The app paints translucent SURFACES, not text. */
+window.background, window.nautilus-window {
+  background-color: alpha(#1b1e25, 0.77);
+  color: #dce0e7;
+  border-radius: 8px;
+}
+/* Remove the raised frame / hard seam around the top bar. */
+window headerbar, window .titlebar, window .toolbar {
+  background-color: alpha(#242831, 0.80);
+  background-image: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+}
+window headerbar button, window .toolbar button {
+  border-radius: 6px;
+  box-shadow: none;
+}
+window headerbar button:not(:hover):not(:checked),
+window .toolbar button:not(:hover):not(:checked) {
+  background: transparent;
+  border-color: transparent;
+}
+/* File content should not repaint the entire window with an opaque fill. */
+window .view, window gridview, window columnview,
+window columnview > listview, window scrolledwindow, window viewport,
+window .nautilus-files-view, window .nautilus-list-view {
+  background-color: transparent;
+}
+window .sidebar, window .navigation-sidebar, window .sidebar-pane {
+  background-color: alpha(#262832, 0.79);
+}
+window .sidebar row:selected, window .navigation-sidebar row:selected {
+  background-color: alpha(#aeb6c8, 0.16);
+  border-radius: 6px;
+}
+window .nautilus-pathbar {
+  background-color: alpha(#a9b6c8, 0.075);
+  border-radius: 7px;
+  box-shadow: none;
+}
+window .nautilus-path-button { border-radius: 6px; }
+window .floating-bar {
+  background-color: alpha(#313743, 0.85);
+  border: 1px solid alpha(white, 0.08);
+  border-radius: 8px;
+}
+window popover > contents, window .popover > contents {
+  border-radius: 8px;
+}
+/* CAPSULE GLASS 03 END */
+
+
+/* REPTILLUS_UNIFORM_GRAPHITE_BEGIN
+ * Temporary Reptillus-only color unification.
+ * Graphite and Capsule remain separate projects.
+ * All major window surfaces use the same neutral graphite base.
+ */
+@define-color reptillus_uniform_surface rgba(38, 40, 47, 0.96);
+
+/* Root window and all structural surfaces. */
+window,
+window.background,
+window > box,
+window .background,
+window .view,
+window .navigation-sidebar,
+window .sidebar,
+window .sidebar-pane,
+window .content,
+window .content-pane,
+window .nautilus-window,
+window .nautilus-window-pane,
+window scrolledwindow:not(.nautilus-pathbar scrolledwindow),
+window scrolledwindow > viewport,
+window viewport,
+window listview,
+window columnview,
+window gridview,
+window .view > widget {
+  background-color: @reptillus_uniform_surface;
+  background-image: none;
+}
+
+/* Keep header, toolbar and sidebar at the same graphite value. */
+window headerbar,
+window .titlebar,
+window .toolbar,
+window .toolbarview,
+window .toolbar-view,
+window .sidebar,
+window .navigation-sidebar,
+window .sidebar-pane {
+  background-color: @reptillus_uniform_surface;
+  background-image: none;
+  box-shadow: none;
+}
+
+/* GTK list rows are transparent so the common graphite surface shows through. */
+window listview > row:not(:selected):not(:hover),
+window columnview > listview > row:not(:selected):not(:hover),
+window gridview > child:not(:selected):not(:hover) {
+  background-color: transparent;
+  background-image: none;
+}
+/* REPTILLUS_UNIFORM_GRAPHITE_END */
+
+
+
+
+/* REPTILLUS PATHBAR SURFACE FIX START */
+
+/* Breadcrumb container */
+window box.nautilus-pathbar {
+  background-color: #343841;
+  background-image: none;
+  border-radius: 9px;
+  box-shadow: inset 0 1px alpha(white, 0.05);
+}
+
+/* The scrolled breadcrumb area must not cover the parent background. */
+window box.nautilus-pathbar > scrolledwindow {
+  background-color: transparent;
+  background-image: none;
+}
+
+/* Breadcrumb buttons inherit the parent material. */
+window box.nautilus-pathbar .nautilus-path-button {
+  background-color: transparent;
+  border-radius: 7px;
+}
+
+/* REPTILLUS PATHBAR SURFACE FIX END */
+
+
+/* REPTILLUS FILE VIEW SURFACE START */
+/* Restore the file-list surface without styling the pathbar. */
+
+window .nautilus-files-view scrolledwindow,
+window .nautilus-files-view viewport,
+window .nautilus-list-view scrolledwindow,
+window .nautilus-list-view viewport,
+window columnview,
+window columnview > listview,
+window gridview {
+  background-color: @reptillus_uniform_surface;
+  background-image: none;
+}
+
+/* REPTILLUS FILE VIEW SURFACE END */
+
+/* REPTILLUS TOOLBAR SEAM TEST START */
+
+/* Remove decorative borders and shadows from toolbar containers. */
+window toolbarview,
+window toolbarview > box,
+window toolbarview headerbar,
+window toolbarview .toolbar {
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+/* REPTILLUS TOOLBAR SEAM TEST END */
+
+/* REPTILLUS RAISED HEADER TEST START */
+window toolbarview .raised,
+window toolbarview .raised headerbar,
+window toolbarview headerbar.raised,
+window toolbarview .top-bar {
+  box-shadow: none;
+  border: none;
+  background-image: none;
+}
+/* REPTILLUS RAISED HEADER TEST END */
+
+
+
+
+
